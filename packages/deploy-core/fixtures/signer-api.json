@@ -1,0 +1,418 @@
+{
+  "request": {
+    "hostId": "11111111-2222-4333-8444-555555555555",
+    "agentFingerprint": "fa2c5e76886abdef6ef82d0075120b354575b2509699a64954f032c275244fc4",
+    "content": "host-state/0",
+    "seqHint": 4,
+    "state": {
+      "apps": [
+        {
+          "addons": [],
+          "adopted": false,
+          "adoptedVolumes": [],
+          "applySpec": {
+            "stableChecks": 3,
+            "stableIntervalSeconds": 5,
+            "waitTimeoutSeconds": 600
+          },
+          "backupKeep": 0,
+          "backupSpec": {
+            "postgres": [
+              {
+                "database": "postgres",
+                "service": "db",
+                "user": "supabase_admin"
+              }
+            ],
+            "volumes": [
+              "db-data",
+              "storage-data"
+            ]
+          },
+          "buildArgs": {
+            "SITE_URL": "https://db.example.com",
+            "SMTP_ENABLED": "false"
+          },
+          "buildMethod": null,
+          "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.1\n",
+          "desired": "present",
+          "domain": "db.example.com",
+          "env": {
+            "SITE_URL": "https://db.example.com",
+            "SMTP_ENABLED": "false"
+          },
+          "files": [
+            {
+              "content": "_format_version: '2.1'\n",
+              "mode": "0644",
+              "path": "volumes/api/kong.yml"
+            },
+            {
+              "content": "create schema if not exists app;\n",
+              "mode": "0644",
+              "path": "volumes/db/init.sql"
+            }
+          ],
+          "firstRelease": true,
+          "gitBaseDir": "",
+          "gitBranch": null,
+          "gitBuildContextRoot": false,
+          "gitKey": null,
+          "gitRepo": null,
+          "gitToken": null,
+          "internalPort": 8000,
+          "needsBackup": true,
+          "purgeData": false,
+          "releaseId": "8f14e45f-ceea-467a-9e6f-1b2c3d4e5f60",
+          "releaseStatus": "pending",
+          "rollbackCompose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.0\n",
+          "routes": [
+            {
+              "domain": "db.example.com",
+              "policies": [],
+              "port": 8000,
+              "service": "app"
+            },
+            {
+              "domain": "studio.example.com",
+              "policies": [
+                {
+                  "passwordHash": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+                  "type": "basic_auth",
+                  "username": "admin"
+                },
+                {
+                  "cidrs": [
+                    "203.0.113.7",
+                    "10.0.0.0/8"
+                  ],
+                  "type": "ip_allowlist"
+                },
+                {
+                  "type": "forward_auth"
+                }
+              ],
+              "port": 3000,
+              "service": "studio"
+            }
+          ],
+          "slug": "supabase",
+          "sourceType": "template"
+        },
+        {
+          "addons": [],
+          "adopted": false,
+          "adoptedVolumes": [],
+          "applySpec": {},
+          "backupKeep": 0,
+          "backupSpec": {},
+          "buildArgs": {
+            "NODE_ENV": "production"
+          },
+          "buildMethod": "compose",
+          "compose": "",
+          "desired": "absent",
+          "domain": null,
+          "env": {
+            "NODE_ENV": "production"
+          },
+          "files": [],
+          "firstRelease": false,
+          "gitBaseDir": "",
+          "gitBranch": "main",
+          "gitBuildContextRoot": false,
+          "gitKey": null,
+          "gitRepo": "git@github.com:acme/backend.git",
+          "gitToken": null,
+          "internalPort": 3000,
+          "needsBackup": false,
+          "purgeData": true,
+          "releaseId": "1c383cd3-0b0f-4a2c-8d1e-2f3a4b5c6d7e",
+          "releaseStatus": "healthy",
+          "rollbackCompose": "",
+          "routes": [],
+          "slug": "backend",
+          "sourceType": "git"
+        },
+        {
+          "addons": [
+            {
+              "image": "postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef",
+              "kind": "postgres",
+              "service": "db"
+            },
+            {
+              "image": "redis:7.4-alpine@sha256:e7723ff73d963f5cc6d9c4643ea3d989527a402a319239054e9472a7fb9219a2",
+              "kind": "redis",
+              "service": "redis"
+            }
+          ],
+          "adopted": false,
+          "adoptedVolumes": [],
+          "applySpec": {},
+          "backupKeep": 0,
+          "backupSpec": {},
+          "buildArgs": {
+            "NODE_ENV": "production"
+          },
+          "buildMethod": "dockerfile",
+          "compose": "",
+          "desired": "present",
+          "domain": "site.example.com",
+          "env": {
+            "NODE_ENV": "production"
+          },
+          "files": [],
+          "firstRelease": true,
+          "gitBaseDir": "apps/web",
+          "gitBranch": "main",
+          "gitBuildContextRoot": true,
+          "gitKey": null,
+          "gitRepo": "acme/site",
+          "gitToken": null,
+          "internalPort": 3000,
+          "needsBackup": false,
+          "purgeData": false,
+          "releaseId": "2d4a8f10-5c6b-4e7d-8a9b-0c1d2e3f4a5b",
+          "releaseStatus": "pending",
+          "rollbackCompose": "",
+          "routes": [
+            {
+              "domain": "site.example.com",
+              "policies": [],
+              "port": 3000,
+              "service": "app"
+            }
+          ],
+          "slug": "site",
+          "sourceType": "git"
+        },
+        {
+          "addons": [],
+          "adopted": false,
+          "adoptedVolumes": [],
+          "applySpec": {},
+          "backupKeep": 0,
+          "backupSpec": {},
+          "buildArgs": {
+            "NODE_ENV": "production"
+          },
+          "buildMethod": "dockerfile",
+          "compose": "",
+          "desired": "present",
+          "domain": "status.example.com",
+          "env": {
+            "NODE_ENV": "production"
+          },
+          "files": [],
+          "firstRelease": true,
+          "gitBaseDir": "",
+          "gitBranch": "master",
+          "gitBuildContextRoot": false,
+          "gitKey": null,
+          "gitRepo": "https://github.com/louislam/uptime-kuma.git",
+          "gitToken": null,
+          "internalPort": 3001,
+          "needsBackup": false,
+          "purgeData": false,
+          "releaseId": "3e7b2c91-4d5a-4f6e-9a0b-1c2d3e4f5a6b",
+          "releaseStatus": "pending",
+          "rollbackCompose": "",
+          "routes": [
+            {
+              "domain": "status.example.com",
+              "policies": [],
+              "port": 3001,
+              "service": "app"
+            }
+          ],
+          "slug": "kuma",
+          "sourceType": "git"
+        },
+        {
+          "addons": [],
+          "adopted": false,
+          "adoptedVolumes": [
+            "h804o84oc008ko0ko0owocwo_supabase-db-data",
+            "h804o84oc008ko0ko0owocwo_supabase-db-config"
+          ],
+          "applySpec": {},
+          "backupKeep": 0,
+          "backupSpec": {},
+          "buildArgs": {},
+          "buildMethod": null,
+          "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.1@sha256:0000000000000000000000000000000000000000000000000000000000000000\n",
+          "desired": "present",
+          "domain": "api.example.com",
+          "env": {},
+          "files": [
+            {
+              "content": "_format_version: '2.1'\n",
+              "mode": "0644",
+              "path": "volumes/api/kong.yml"
+            }
+          ],
+          "firstRelease": true,
+          "gitBaseDir": "",
+          "gitBranch": null,
+          "gitBuildContextRoot": false,
+          "gitKey": null,
+          "gitRepo": null,
+          "gitToken": null,
+          "internalPort": 8000,
+          "needsBackup": false,
+          "purgeData": false,
+          "releaseId": "4f8c1d02-6e7a-4b8c-9d0e-1f2a3b4c5d6e",
+          "releaseStatus": "pending",
+          "rollbackCompose": "",
+          "routes": [
+            {
+              "domain": "api.example.com",
+              "policies": [],
+              "port": 8000,
+              "service": "app"
+            }
+          ],
+          "slug": "sigma-supabase",
+          "sourceType": "compose"
+        },
+        {
+          "addons": [],
+          "adopted": false,
+          "adoptedVolumes": [],
+          "applySpec": {},
+          "backupKeep": 0,
+          "backupSpec": {
+            "stateless": true
+          },
+          "buildArgs": {},
+          "buildMethod": null,
+          "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: traefik/whoami:v1.10.3\n",
+          "desired": "present",
+          "domain": "who.example.com",
+          "env": {},
+          "files": [],
+          "firstRelease": false,
+          "gitBaseDir": "",
+          "gitBranch": null,
+          "gitBuildContextRoot": false,
+          "gitKey": null,
+          "gitRepo": null,
+          "gitToken": null,
+          "internalPort": 80,
+          "needsBackup": false,
+          "purgeData": false,
+          "releaseId": "6b1e3f2a-9c4d-4e8f-a1b2-c3d4e5f60718",
+          "releaseStatus": "pending",
+          "rollbackCompose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: traefik/whoami:v1.10.2\n",
+          "routes": [
+            {
+              "domain": "who.example.com",
+              "policies": [],
+              "port": 80,
+              "service": "app"
+            }
+          ],
+          "slug": "whoami",
+          "sourceType": "template"
+        }
+      ],
+      "denyIps": [
+        "198.51.100.0/24",
+        "203.0.113.7",
+        "2001:db8:dead::/64"
+      ],
+      "objectStorage": {
+        "accessKeyId": "test-only-access-key-id",
+        "addressing": "path",
+        "bucket": "acme-backups",
+        "caCertificate": null,
+        "checksumMode": "sha256",
+        "endpoint": "https://s3.example.net",
+        "keyFingerprint": "test-only-key-fingerprint",
+        "multipart": true,
+        "partSizeBytes": 16777216,
+        "prefix": "hosts/h1/",
+        "probeRequestedAt": "",
+        "region": "ru-central1",
+        "secretAccessKey": "",
+        "sseKmsKeyId": null,
+        "sseMode": "none"
+      },
+      "platformSubdomainBase": "apps.example.net",
+      "registries": [
+        {
+          "registry": "ghcr.io",
+          "token": "",
+          "username": "acme-bot"
+        }
+      ]
+    },
+    "secrets": [
+      "app/backend/gitKey",
+      "app/sigma-supabase/env/POSTGRES_PASSWORD",
+      "app/site/gitToken",
+      "app/supabase/env/JWT_SECRET",
+      "objectStorage/secretAccessKey",
+      "registry/ghcr.io/token"
+    ],
+    "grants": []
+  },
+  "responses": {
+    "signed": {
+      "httpStatus": 200,
+      "body": {
+        "status": "signed",
+        "seq": 5,
+        "payloadSha256": "e024c606fe32c941f8734be96f9a5a4c555e053be950935d2d9d4098554ee6a9",
+        "certSerial": 8,
+        "certNotAfter": "2026-10-01T00:00:00Z",
+        "bundle": {
+          "envelope": {
+            "payloadType": "application/vnd.scopework.host-state+json;v=0",
+            "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3siYWRkb25zIjpbXSwiYWRvcHRlZCI6ZmFsc2UsImFkb3B0ZWRWb2x1bWVzIjpbXSwiYXBwbHlTcGVjIjp7InN0YWJsZUNoZWNrcyI6Mywic3RhYmxlSW50ZXJ2YWxTZWNvbmRzIjo1LCJ3YWl0VGltZW91dFNlY29uZHMiOjYwMH0sImJhY2t1cEtlZXAiOjAsImJhY2t1cFNwZWMiOnsicG9zdGdyZXMiOlt7ImRhdGFiYXNlIjoicG9zdGdyZXMiLCJzZXJ2aWNlIjoiZGIiLCJ1c2VyIjoic3VwYWJhc2VfYWRtaW4ifV0sInZvbHVtZXMiOlsiZGItZGF0YSIsInN0b3JhZ2UtZGF0YSJdfSwiYnVpbGRBcmdzIjp7IlNJVEVfVVJMIjoiaHR0cHM6Ly9kYi5leGFtcGxlLmNvbSIsIlNNVFBfRU5BQkxFRCI6ImZhbHNlIn0sImJ1aWxkTWV0aG9kIjpudWxsLCJjb21wb3NlIjoibmFtZTogJHtBUFBfU0xVR31cbnNlcnZpY2VzOlxuICBhcHA6XG4gICAgaW1hZ2U6IGtvbmc6Mi44LjFcbiIsImRlc2lyZWQiOiJwcmVzZW50IiwiZG9tYWluIjoiZGIuZXhhbXBsZS5jb20iLCJlbnYiOnsiU0lURV9VUkwiOiJodHRwczovL2RiLmV4YW1wbGUuY29tIiwiU01UUF9FTkFCTEVEIjoiZmFsc2UifSwiZmlsZXMiOlt7ImNvbnRlbnQiOiJfZm9ybWF0X3ZlcnNpb246ICcyLjEnXG4iLCJtb2RlIjoiMDY0NCIsInBhdGgiOiJ2b2x1bWVzL2FwaS9rb25nLnltbCJ9LHsiY29udGVudCI6ImNyZWF0ZSBzY2hlbWEgaWYgbm90IGV4aXN0cyBhcHA7XG4iLCJtb2RlIjoiMDY0NCIsInBhdGgiOiJ2b2x1bWVzL2RiL2luaXQuc3FsIn1dLCJmaXJzdFJlbGVhc2UiOnRydWUsImdpdEJhc2VEaXIiOiIiLCJnaXRCcmFuY2giOm51bGwsImdpdEJ1aWxkQ29udGV4dFJvb3QiOmZhbHNlLCJnaXRLZXkiOm51bGwsImdpdFJlcG8iOm51bGwsImdpdFRva2VuIjpudWxsLCJpbnRlcm5hbFBvcnQiOjgwMDAsIm5lZWRzQmFja3VwIjp0cnVlLCJwdXJnZURhdGEiOmZhbHNlLCJyZWxlYXNlSWQiOiI4ZjE0ZTQ1Zi1jZWVhLTQ2N2EtOWU2Zi0xYjJjM2Q0ZTVmNjAiLCJyZWxlYXNlU3RhdHVzIjoicGVuZGluZyIsInJvbGxiYWNrQ29tcG9zZSI6Im5hbWU6ICR7QVBQX1NMVUd9XG5zZXJ2aWNlczpcbiAgYXBwOlxuICAgIGltYWdlOiBrb25nOjIuOC4wXG4iLCJyb3V0ZXMiOlt7ImRvbWFpbiI6ImRiLmV4YW1wbGUuY29tIiwicG9saWNpZXMiOltdLCJwb3J0Ijo4MDAwLCJzZXJ2aWNlIjoiYXBwIn0seyJkb21haW4iOiJzdHVkaW8uZXhhbXBsZS5jb20iLCJwb2xpY2llcyI6W3sicGFzc3dvcmRIYXNoIjoiJDJhJDEwJE45cW84dUxPaWNrZ3gyWk1SWm9NeWVJalpBZ2NmbDdwOTJsZEd4YWQ2OExKWmRMMTdsaFd5IiwidHlwZSI6ImJhc2ljX2F1dGgiLCJ1c2VybmFtZSI6ImFkbWluIn0seyJjaWRycyI6WyIyMDMuMC4xMTMuNyIsIjEwLjAuMC4wLzgiXSwidHlwZSI6ImlwX2FsbG93bGlzdCJ9LHsidHlwZSI6ImZvcndhcmRfYXV0aCJ9XSwicG9ydCI6MzAwMCwic2VydmljZSI6InN0dWRpbyJ9XSwic2x1ZyI6InN1cGFiYXNlIiwic291cmNlVHlwZSI6InRlbXBsYXRlIn0seyJhZGRvbnMiOltdLCJhZG9wdGVkIjpmYWxzZSwiYWRvcHRlZFZvbHVtZXMiOltdLCJhcHBseVNwZWMiOnt9LCJiYWNrdXBLZWVwIjowLCJiYWNrdXBTcGVjIjp7fSwiYnVpbGRBcmdzIjp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJidWlsZE1ldGhvZCI6ImNvbXBvc2UiLCJjb21wb3NlIjoiIiwiZGVzaXJlZCI6ImFic2VudCIsImRvbWFpbiI6bnVsbCwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJmaWxlcyI6W10sImZpcnN0UmVsZWFzZSI6ZmFsc2UsImdpdEJhc2VEaXIiOiIiLCJnaXRCcmFuY2giOiJtYWluIiwiZ2l0QnVpbGRDb250ZXh0Um9vdCI6ZmFsc2UsImdpdEtleSI6bnVsbCwiZ2l0UmVwbyI6ImdpdEBnaXRodWIuY29tOmFjbWUvYmFja2VuZC5naXQiLCJnaXRUb2tlbiI6bnVsbCwiaW50ZXJuYWxQb3J0IjozMDAwLCJuZWVkc0JhY2t1cCI6ZmFsc2UsInB1cmdlRGF0YSI6dHJ1ZSwicmVsZWFzZUlkIjoiMWMzODNjZDMtMGIwZi00YTJjLThkMWUtMmYzYTRiNWM2ZDdlIiwicmVsZWFzZVN0YXR1cyI6ImhlYWx0aHkiLCJyb2xsYmFja0NvbXBvc2UiOiIiLCJyb3V0ZXMiOltdLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImFkZG9ucyI6W3siaW1hZ2UiOiJwb3N0Z3JlczoxNi42LWFscGluZUBzaGEyNTY6MWQwNGI5YmExZDQ5OTY0MDFmMjU1MmI1MWJlZGE4MTg3ZjE3NWMwNjQ1YzA5MWU0NzgxMTM0ZmM5YzlhM2VlZiIsImtpbmQiOiJwb3N0Z3JlcyIsInNlcnZpY2UiOiJkYiJ9LHsiaW1hZ2UiOiJyZWRpczo3LjQtYWxwaW5lQHNoYTI1NjplNzcyM2ZmNzNkOTYzZjVjYzZkOWM0NjQzZWEzZDk4OTUyN2E0MDJhMzE5MjM5MDU0ZTk0NzJhN2ZiOTIxOWEyIiwia2luZCI6InJlZGlzIiwic2VydmljZSI6InJlZGlzIn1dLCJhZG9wdGVkIjpmYWxzZSwiYWRvcHRlZFZvbHVtZXMiOltdLCJhcHBseVNwZWMiOnt9LCJiYWNrdXBLZWVwIjowLCJiYWNrdXBTcGVjIjp7fSwiYnVpbGRBcmdzIjp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJidWlsZE1ldGhvZCI6ImRvY2tlcmZpbGUiLCJjb21wb3NlIjoiIiwiZGVzaXJlZCI6InByZXNlbnQiLCJkb21haW4iOiJzaXRlLmV4YW1wbGUuY29tIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJmaWxlcyI6W10sImZpcnN0UmVsZWFzZSI6dHJ1ZSwiZ2l0QmFzZURpciI6ImFwcHMvd2ViIiwiZ2l0QnJhbmNoIjoibWFpbiIsImdpdEJ1aWxkQ29udGV4dFJvb3QiOnRydWUsImdpdEtleSI6bnVsbCwiZ2l0UmVwbyI6ImFjbWUvc2l0ZSIsImdpdFRva2VuIjpudWxsLCJpbnRlcm5hbFBvcnQiOjMwMDAsIm5lZWRzQmFja3VwIjpmYWxzZSwicHVyZ2VEYXRhIjpmYWxzZSwicmVsZWFzZUlkIjoiMmQ0YThmMTAtNWM2Yi00ZTdkLThhOWItMGMxZDJlM2Y0YTViIiwicmVsZWFzZVN0YXR1cyI6InBlbmRpbmciLCJyb2xsYmFja0NvbXBvc2UiOiIiLCJyb3V0ZXMiOlt7ImRvbWFpbiI6InNpdGUuZXhhbXBsZS5jb20iLCJwb2xpY2llcyI6W10sInBvcnQiOjMwMDAsInNlcnZpY2UiOiJhcHAifV0sInNsdWciOiJzaXRlIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiYWRkb25zIjpbXSwiYWRvcHRlZCI6ZmFsc2UsImFkb3B0ZWRWb2x1bWVzIjpbXSwiYXBwbHlTcGVjIjp7fSwiYmFja3VwS2VlcCI6MCwiYmFja3VwU3BlYyI6e30sImJ1aWxkQXJncyI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiYnVpbGRNZXRob2QiOiJkb2NrZXJmaWxlIiwiY29tcG9zZSI6IiIsImRlc2lyZWQiOiJwcmVzZW50IiwiZG9tYWluIjoic3RhdHVzLmV4YW1wbGUuY29tIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJmaWxlcyI6W10sImZpcnN0UmVsZWFzZSI6dHJ1ZSwiZ2l0QmFzZURpciI6IiIsImdpdEJyYW5jaCI6Im1hc3RlciIsImdpdEJ1aWxkQ29udGV4dFJvb3QiOmZhbHNlLCJnaXRLZXkiOm51bGwsImdpdFJlcG8iOiJodHRwczovL2dpdGh1Yi5jb20vbG91aXNsYW0vdXB0aW1lLWt1bWEuZ2l0IiwiZ2l0VG9rZW4iOm51bGwsImludGVybmFsUG9ydCI6MzAwMSwibmVlZHNCYWNrdXAiOmZhbHNlLCJwdXJnZURhdGEiOmZhbHNlLCJyZWxlYXNlSWQiOiIzZTdiMmM5MS00ZDVhLTRmNmUtOWEwYi0xYzJkM2U0ZjVhNmIiLCJyZWxlYXNlU3RhdHVzIjoicGVuZGluZyIsInJvbGxiYWNrQ29tcG9zZSI6IiIsInJvdXRlcyI6W3siZG9tYWluIjoic3RhdHVzLmV4YW1wbGUuY29tIiwicG9saWNpZXMiOltdLCJwb3J0IjozMDAxLCJzZXJ2aWNlIjoiYXBwIn1dLCJzbHVnIjoia3VtYSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImFkZG9ucyI6W10sImFkb3B0ZWQiOmZhbHNlLCJhZG9wdGVkVm9sdW1lcyI6WyJoODA0bzg0b2MwMDhrbzBrbzBvd29jd29fc3VwYWJhc2UtZGItZGF0YSIsImg4MDRvODRvYzAwOGtvMGtvMG93b2N3b19zdXBhYmFzZS1kYi1jb25maWciXSwiYXBwbHlTcGVjIjp7fSwiYmFja3VwS2VlcCI6MCwiYmFja3VwU3BlYyI6e30sImJ1aWxkQXJncyI6e30sImJ1aWxkTWV0aG9kIjpudWxsLCJjb21wb3NlIjoibmFtZTogJHtBUFBfU0xVR31cbnNlcnZpY2VzOlxuICBhcHA6XG4gICAgaW1hZ2U6IGtvbmc6Mi44LjFAc2hhMjU2OjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBcbiIsImRlc2lyZWQiOiJwcmVzZW50IiwiZG9tYWluIjoiYXBpLmV4YW1wbGUuY29tIiwiZW52Ijp7fSwiZmlsZXMiOlt7ImNvbnRlbnQiOiJfZm9ybWF0X3ZlcnNpb246ICcyLjEnXG4iLCJtb2RlIjoiMDY0NCIsInBhdGgiOiJ2b2x1bWVzL2FwaS9rb25nLnltbCJ9XSwiZmlyc3RSZWxlYXNlIjp0cnVlLCJnaXRCYXNlRGlyIjoiIiwiZ2l0QnJhbmNoIjpudWxsLCJnaXRCdWlsZENvbnRleHRSb290IjpmYWxzZSwiZ2l0S2V5IjpudWxsLCJnaXRSZXBvIjpudWxsLCJnaXRUb2tlbiI6bnVsbCwiaW50ZXJuYWxQb3J0Ijo4MDAwLCJuZWVkc0JhY2t1cCI6ZmFsc2UsInB1cmdlRGF0YSI6ZmFsc2UsInJlbGVhc2VJZCI6IjRmOGMxZDAyLTZlN2EtNGI4Yy05ZDBlLTFmMmEzYjRjNWQ2ZSIsInJlbGVhc2VTdGF0dXMiOiJwZW5kaW5nIiwicm9sbGJhY2tDb21wb3NlIjoiIiwicm91dGVzIjpbeyJkb21haW4iOiJhcGkuZXhhbXBsZS5jb20iLCJwb2xpY2llcyI6W10sInBvcnQiOjgwMDAsInNlcnZpY2UiOiJhcHAifV0sInNsdWciOiJzaWdtYS1zdXBhYmFzZSIsInNvdXJjZVR5cGUiOiJjb21wb3NlIn0seyJhZGRvbnMiOltdLCJhZG9wdGVkIjpmYWxzZSwiYWRvcHRlZFZvbHVtZXMiOltdLCJhcHBseVNwZWMiOnt9LCJiYWNrdXBLZWVwIjowLCJiYWNrdXBTcGVjIjp7InN0YXRlbGVzcyI6dHJ1ZX0sImJ1aWxkQXJncyI6e30sImJ1aWxkTWV0aG9kIjpudWxsLCJjb21wb3NlIjoibmFtZTogJHtBUFBfU0xVR31cbnNlcnZpY2VzOlxuICBhcHA6XG4gICAgaW1hZ2U6IHRyYWVmaWsvd2hvYW1pOnYxLjEwLjNcbiIsImRlc2lyZWQiOiJwcmVzZW50IiwiZG9tYWluIjoid2hvLmV4YW1wbGUuY29tIiwiZW52Ijp7fSwiZmlsZXMiOltdLCJmaXJzdFJlbGVhc2UiOmZhbHNlLCJnaXRCYXNlRGlyIjoiIiwiZ2l0QnJhbmNoIjpudWxsLCJnaXRCdWlsZENvbnRleHRSb290IjpmYWxzZSwiZ2l0S2V5IjpudWxsLCJnaXRSZXBvIjpudWxsLCJnaXRUb2tlbiI6bnVsbCwiaW50ZXJuYWxQb3J0Ijo4MCwibmVlZHNCYWNrdXAiOmZhbHNlLCJwdXJnZURhdGEiOmZhbHNlLCJyZWxlYXNlSWQiOiI2YjFlM2YyYS05YzRkLTRlOGYtYTFiMi1jM2Q0ZTVmNjA3MTgiLCJyZWxlYXNlU3RhdHVzIjoicGVuZGluZyIsInJvbGxiYWNrQ29tcG9zZSI6Im5hbWU6ICR7QVBQX1NMVUd9XG5zZXJ2aWNlczpcbiAgYXBwOlxuICAgIGltYWdlOiB0cmFlZmlrL3dob2FtaTp2MS4xMC4yXG4iLCJyb3V0ZXMiOlt7ImRvbWFpbiI6Indoby5leGFtcGxlLmNvbSIsInBvbGljaWVzIjpbXSwicG9ydCI6ODAsInNlcnZpY2UiOiJhcHAifV0sInNsdWciOiJ3aG9hbWkiLCJzb3VyY2VUeXBlIjoidGVtcGxhdGUifV0sImRlbnlJcHMiOlsiMTk4LjUxLjEwMC4wLzI0IiwiMjAzLjAuMTEzLjciLCIyMDAxOmRiODpkZWFkOjovNjQiXSwib2JqZWN0U3RvcmFnZSI6eyJhY2Nlc3NLZXlJZCI6InRlc3Qtb25seS1hY2Nlc3Mta2V5LWlkIiwiYWRkcmVzc2luZyI6InBhdGgiLCJidWNrZXQiOiJhY21lLWJhY2t1cHMiLCJjYUNlcnRpZmljYXRlIjpudWxsLCJjaGVja3N1bU1vZGUiOiJzaGEyNTYiLCJlbmRwb2ludCI6Imh0dHBzOi8vczMuZXhhbXBsZS5uZXQiLCJrZXlGaW5nZXJwcmludCI6InRlc3Qtb25seS1rZXktZmluZ2VycHJpbnQiLCJtdWx0aXBhcnQiOnRydWUsInBhcnRTaXplQnl0ZXMiOjE2Nzc3MjE2LCJwcmVmaXgiOiJob3N0cy9oMS8iLCJwcm9iZVJlcXVlc3RlZEF0IjoiIiwicmVnaW9uIjoicnUtY2VudHJhbDEiLCJzZWNyZXRBY2Nlc3NLZXkiOiIiLCJzc2VLbXNLZXlJZCI6bnVsbCwic3NlTW9kZSI6Im5vbmUifSwicGxhdGZvcm1TdWJkb21haW5CYXNlIjoiYXBwcy5leGFtcGxlLm5ldCIsInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInRva2VuIjoiIiwidXNlcm5hbWUiOiJhY21lLWJvdCJ9XX0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL3NpZ21hLXN1cGFiYXNlL2Vudi9QT1NUR1JFU19QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwiYXBwL3N1cGFiYXNlL2Vudi9KV1RfU0VDUkVUIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W119fQ==",
+            "signatures": [
+              {
+                "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+                "sig": "rAmLdz9CCVSIhbwmlHp8GzQmKqxT4i1Tg0UkuZaFJSFEmNCUsHCLt9sYfwuFFgQ/MUZydzWLfxXEvh/CW8wSBQ=="
+              }
+            ]
+          },
+          "certificate": {
+            "payloadType": "application/vnd.scopework.signer-cert+json",
+            "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+            "signatures": [
+              {
+                "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+                "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+              }
+            ]
+          }
+        }
+      }
+    },
+    "refused": {
+      "httpStatus": 200,
+      "body": {
+        "status": "refused",
+        "reason": "policy_violation",
+        "violations": [
+          {
+            "app": "sigma-supabase",
+            "rule": "сервис app: privileged: true снимает почти все ограничения контейнера"
+          }
+        ]
+      }
+    },
+    "unavailable": {
+      "httpStatus": 503,
+      "body": null
+    }
+  },
+  "health": {
+    "ok": true,
+    "certSerial": 8,
+    "certNotAfter": "2026-10-01T00:00:00Z",
+    "expiresSoon": false
+  }
+}

@@ -1,0 +1,717 @@
+{
+  "payload": {
+    "apps": [
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {
+          "stableChecks": 3,
+          "stableIntervalSeconds": 5,
+          "waitTimeoutSeconds": 600
+        },
+        "backupKeep": 0,
+        "backupSpec": {
+          "postgres": [
+            {
+              "database": "postgres",
+              "service": "db",
+              "user": "supabase_admin"
+            }
+          ],
+          "volumes": [
+            "db-data",
+            "storage-data"
+          ]
+        },
+        "buildArgs": {
+          "SITE_URL": "https://db.example.com",
+          "SMTP_ENABLED": "false"
+        },
+        "buildMethod": null,
+        "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.1\n",
+        "desired": "present",
+        "domain": "db.example.com",
+        "env": {
+          "JWT_SECRET": "test-only-jwt-secret-value-32-bytes",
+          "SITE_URL": "https://db.example.com",
+          "SMTP_ENABLED": "false"
+        },
+        "files": [
+          {
+            "content": "_format_version: '2.1'\n",
+            "mode": "0644",
+            "path": "volumes/api/kong.yml"
+          },
+          {
+            "content": "create schema if not exists app;\n",
+            "mode": "0644",
+            "path": "volumes/db/init.sql"
+          }
+        ],
+        "firstRelease": true,
+        "gitBaseDir": "",
+        "gitBranch": null,
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": null,
+        "gitToken": null,
+        "internalPort": 8000,
+        "needsBackup": true,
+        "purgeData": false,
+        "releaseId": "8f14e45f-ceea-467a-9e6f-1b2c3d4e5f60",
+        "releaseStatus": "pending",
+        "rollbackCompose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.0\n",
+        "routes": [
+          {
+            "domain": "db.example.com",
+            "policies": [],
+            "port": 8000,
+            "service": "app"
+          },
+          {
+            "domain": "studio.example.com",
+            "policies": [
+              {
+                "passwordHash": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+                "type": "basic_auth",
+                "username": "admin"
+              },
+              {
+                "cidrs": [
+                  "203.0.113.7",
+                  "10.0.0.0/8"
+                ],
+                "type": "ip_allowlist"
+              },
+              {
+                "type": "forward_auth"
+              }
+            ],
+            "port": 3000,
+            "service": "studio"
+          }
+        ],
+        "slug": "supabase",
+        "sourceType": "template"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {
+          "NODE_ENV": "production"
+        },
+        "buildMethod": "compose",
+        "compose": "",
+        "desired": "absent",
+        "domain": null,
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "files": [],
+        "firstRelease": false,
+        "gitBaseDir": "",
+        "gitBranch": "main",
+        "gitBuildContextRoot": false,
+        "gitKey": "-----BEGIN OPENSSH PRIVATE KEY-----\ntest\n-----END OPENSSH PRIVATE KEY-----\n",
+        "gitRepo": "git@github.com:acme/backend.git",
+        "gitToken": null,
+        "internalPort": 3000,
+        "needsBackup": false,
+        "purgeData": true,
+        "releaseId": "1c383cd3-0b0f-4a2c-8d1e-2f3a4b5c6d7e",
+        "releaseStatus": "healthy",
+        "rollbackCompose": "",
+        "routes": [],
+        "slug": "backend",
+        "sourceType": "git"
+      },
+      {
+        "addons": [
+          {
+            "image": "postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef",
+            "kind": "postgres",
+            "service": "db"
+          },
+          {
+            "image": "redis:7.4-alpine@sha256:e7723ff73d963f5cc6d9c4643ea3d989527a402a319239054e9472a7fb9219a2",
+            "kind": "redis",
+            "service": "redis"
+          }
+        ],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {
+          "NODE_ENV": "production"
+        },
+        "buildMethod": "dockerfile",
+        "compose": "",
+        "desired": "present",
+        "domain": "site.example.com",
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "files": [],
+        "firstRelease": true,
+        "gitBaseDir": "apps/web",
+        "gitBranch": "main",
+        "gitBuildContextRoot": true,
+        "gitKey": null,
+        "gitRepo": "acme/site",
+        "gitToken": "ghs_testonlyinstallationtoken",
+        "internalPort": 3000,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "2d4a8f10-5c6b-4e7d-8a9b-0c1d2e3f4a5b",
+        "releaseStatus": "pending",
+        "rollbackCompose": "",
+        "routes": [
+          {
+            "domain": "site.example.com",
+            "policies": [],
+            "port": 3000,
+            "service": "app"
+          }
+        ],
+        "slug": "site",
+        "sourceType": "git"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {
+          "NODE_ENV": "production"
+        },
+        "buildMethod": "dockerfile",
+        "compose": "",
+        "desired": "present",
+        "domain": "status.example.com",
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "files": [],
+        "firstRelease": true,
+        "gitBaseDir": "",
+        "gitBranch": "master",
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": "https://github.com/louislam/uptime-kuma.git",
+        "gitToken": null,
+        "internalPort": 3001,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "3e7b2c91-4d5a-4f6e-9a0b-1c2d3e4f5a6b",
+        "releaseStatus": "pending",
+        "rollbackCompose": "",
+        "routes": [
+          {
+            "domain": "status.example.com",
+            "policies": [],
+            "port": 3001,
+            "service": "app"
+          }
+        ],
+        "slug": "kuma",
+        "sourceType": "git"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [
+          "h804o84oc008ko0ko0owocwo_supabase-db-data",
+          "h804o84oc008ko0ko0owocwo_supabase-db-config"
+        ],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {},
+        "buildMethod": null,
+        "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.1@sha256:0000000000000000000000000000000000000000000000000000000000000000\n",
+        "desired": "present",
+        "domain": "api.example.com",
+        "env": {
+          "POSTGRES_PASSWORD": "test-only-password"
+        },
+        "files": [
+          {
+            "content": "_format_version: '2.1'\n",
+            "mode": "0644",
+            "path": "volumes/api/kong.yml"
+          }
+        ],
+        "firstRelease": true,
+        "gitBaseDir": "",
+        "gitBranch": null,
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": null,
+        "gitToken": null,
+        "internalPort": 8000,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "4f8c1d02-6e7a-4b8c-9d0e-1f2a3b4c5d6e",
+        "releaseStatus": "pending",
+        "rollbackCompose": "",
+        "routes": [
+          {
+            "domain": "api.example.com",
+            "policies": [],
+            "port": 8000,
+            "service": "app"
+          }
+        ],
+        "slug": "sigma-supabase",
+        "sourceType": "compose"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {
+          "stateless": true
+        },
+        "buildArgs": {},
+        "buildMethod": null,
+        "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: traefik/whoami:v1.10.3\n",
+        "desired": "present",
+        "domain": "who.example.com",
+        "env": {},
+        "files": [],
+        "firstRelease": false,
+        "gitBaseDir": "",
+        "gitBranch": null,
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": null,
+        "gitToken": null,
+        "internalPort": 80,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "6b1e3f2a-9c4d-4e8f-a1b2-c3d4e5f60718",
+        "releaseStatus": "pending",
+        "rollbackCompose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: traefik/whoami:v1.10.2\n",
+        "routes": [
+          {
+            "domain": "who.example.com",
+            "policies": [],
+            "port": 80,
+            "service": "app"
+          }
+        ],
+        "slug": "whoami",
+        "sourceType": "template"
+      }
+    ],
+    "denyIps": [
+      "198.51.100.0/24",
+      "203.0.113.7",
+      "2001:db8:dead::/64"
+    ],
+    "objectStorage": {
+      "accessKeyId": "test-only-access-key-id",
+      "addressing": "path",
+      "bucket": "acme-backups",
+      "caCertificate": null,
+      "checksumMode": "sha256",
+      "endpoint": "https://s3.example.net",
+      "keyFingerprint": "test-only-key-fingerprint",
+      "multipart": true,
+      "partSizeBytes": 16777216,
+      "prefix": "hosts/h1/",
+      "probeRequestedAt": "",
+      "region": "ru-central1",
+      "secretAccessKey": "test-only-secret-access-key",
+      "sseKmsKeyId": null,
+      "sseMode": "none"
+    },
+    "platformSubdomainBase": "apps.example.net",
+    "registries": [
+      {
+        "registry": "ghcr.io",
+        "token": "test-only-token",
+        "username": "acme-bot"
+      }
+    ]
+  },
+  "secretValues": {
+    "app/backend/gitKey": "-----BEGIN OPENSSH PRIVATE KEY-----\ntest\n-----END OPENSSH PRIVATE KEY-----\n",
+    "app/sigma-supabase/env/POSTGRES_PASSWORD": "test-only-password",
+    "app/site/gitToken": "ghs_testonlyinstallationtoken",
+    "app/supabase/env/JWT_SECRET": "test-only-jwt-secret-value-32-bytes",
+    "objectStorage/secretAccessKey": "test-only-secret-access-key",
+    "registry/ghcr.io/token": "test-only-token"
+  },
+  "state": {
+    "apps": [
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {
+          "stableChecks": 3,
+          "stableIntervalSeconds": 5,
+          "waitTimeoutSeconds": 600
+        },
+        "backupKeep": 0,
+        "backupSpec": {
+          "postgres": [
+            {
+              "database": "postgres",
+              "service": "db",
+              "user": "supabase_admin"
+            }
+          ],
+          "volumes": [
+            "db-data",
+            "storage-data"
+          ]
+        },
+        "buildArgs": {
+          "SITE_URL": "https://db.example.com",
+          "SMTP_ENABLED": "false"
+        },
+        "buildMethod": null,
+        "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.1\n",
+        "desired": "present",
+        "domain": "db.example.com",
+        "env": {
+          "SITE_URL": "https://db.example.com",
+          "SMTP_ENABLED": "false"
+        },
+        "files": [
+          {
+            "content": "_format_version: '2.1'\n",
+            "mode": "0644",
+            "path": "volumes/api/kong.yml"
+          },
+          {
+            "content": "create schema if not exists app;\n",
+            "mode": "0644",
+            "path": "volumes/db/init.sql"
+          }
+        ],
+        "firstRelease": true,
+        "gitBaseDir": "",
+        "gitBranch": null,
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": null,
+        "gitToken": null,
+        "internalPort": 8000,
+        "needsBackup": true,
+        "purgeData": false,
+        "releaseId": "8f14e45f-ceea-467a-9e6f-1b2c3d4e5f60",
+        "releaseStatus": "pending",
+        "rollbackCompose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.0\n",
+        "routes": [
+          {
+            "domain": "db.example.com",
+            "policies": [],
+            "port": 8000,
+            "service": "app"
+          },
+          {
+            "domain": "studio.example.com",
+            "policies": [
+              {
+                "passwordHash": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+                "type": "basic_auth",
+                "username": "admin"
+              },
+              {
+                "cidrs": [
+                  "203.0.113.7",
+                  "10.0.0.0/8"
+                ],
+                "type": "ip_allowlist"
+              },
+              {
+                "type": "forward_auth"
+              }
+            ],
+            "port": 3000,
+            "service": "studio"
+          }
+        ],
+        "slug": "supabase",
+        "sourceType": "template"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {
+          "NODE_ENV": "production"
+        },
+        "buildMethod": "compose",
+        "compose": "",
+        "desired": "absent",
+        "domain": null,
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "files": [],
+        "firstRelease": false,
+        "gitBaseDir": "",
+        "gitBranch": "main",
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": "git@github.com:acme/backend.git",
+        "gitToken": null,
+        "internalPort": 3000,
+        "needsBackup": false,
+        "purgeData": true,
+        "releaseId": "1c383cd3-0b0f-4a2c-8d1e-2f3a4b5c6d7e",
+        "releaseStatus": "healthy",
+        "rollbackCompose": "",
+        "routes": [],
+        "slug": "backend",
+        "sourceType": "git"
+      },
+      {
+        "addons": [
+          {
+            "image": "postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef",
+            "kind": "postgres",
+            "service": "db"
+          },
+          {
+            "image": "redis:7.4-alpine@sha256:e7723ff73d963f5cc6d9c4643ea3d989527a402a319239054e9472a7fb9219a2",
+            "kind": "redis",
+            "service": "redis"
+          }
+        ],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {
+          "NODE_ENV": "production"
+        },
+        "buildMethod": "dockerfile",
+        "compose": "",
+        "desired": "present",
+        "domain": "site.example.com",
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "files": [],
+        "firstRelease": true,
+        "gitBaseDir": "apps/web",
+        "gitBranch": "main",
+        "gitBuildContextRoot": true,
+        "gitKey": null,
+        "gitRepo": "acme/site",
+        "gitToken": null,
+        "internalPort": 3000,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "2d4a8f10-5c6b-4e7d-8a9b-0c1d2e3f4a5b",
+        "releaseStatus": "pending",
+        "rollbackCompose": "",
+        "routes": [
+          {
+            "domain": "site.example.com",
+            "policies": [],
+            "port": 3000,
+            "service": "app"
+          }
+        ],
+        "slug": "site",
+        "sourceType": "git"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {
+          "NODE_ENV": "production"
+        },
+        "buildMethod": "dockerfile",
+        "compose": "",
+        "desired": "present",
+        "domain": "status.example.com",
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "files": [],
+        "firstRelease": true,
+        "gitBaseDir": "",
+        "gitBranch": "master",
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": "https://github.com/louislam/uptime-kuma.git",
+        "gitToken": null,
+        "internalPort": 3001,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "3e7b2c91-4d5a-4f6e-9a0b-1c2d3e4f5a6b",
+        "releaseStatus": "pending",
+        "rollbackCompose": "",
+        "routes": [
+          {
+            "domain": "status.example.com",
+            "policies": [],
+            "port": 3001,
+            "service": "app"
+          }
+        ],
+        "slug": "kuma",
+        "sourceType": "git"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [
+          "h804o84oc008ko0ko0owocwo_supabase-db-data",
+          "h804o84oc008ko0ko0owocwo_supabase-db-config"
+        ],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {},
+        "buildArgs": {},
+        "buildMethod": null,
+        "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: kong:2.8.1@sha256:0000000000000000000000000000000000000000000000000000000000000000\n",
+        "desired": "present",
+        "domain": "api.example.com",
+        "env": {},
+        "files": [
+          {
+            "content": "_format_version: '2.1'\n",
+            "mode": "0644",
+            "path": "volumes/api/kong.yml"
+          }
+        ],
+        "firstRelease": true,
+        "gitBaseDir": "",
+        "gitBranch": null,
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": null,
+        "gitToken": null,
+        "internalPort": 8000,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "4f8c1d02-6e7a-4b8c-9d0e-1f2a3b4c5d6e",
+        "releaseStatus": "pending",
+        "rollbackCompose": "",
+        "routes": [
+          {
+            "domain": "api.example.com",
+            "policies": [],
+            "port": 8000,
+            "service": "app"
+          }
+        ],
+        "slug": "sigma-supabase",
+        "sourceType": "compose"
+      },
+      {
+        "addons": [],
+        "adopted": false,
+        "adoptedVolumes": [],
+        "applySpec": {},
+        "backupKeep": 0,
+        "backupSpec": {
+          "stateless": true
+        },
+        "buildArgs": {},
+        "buildMethod": null,
+        "compose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: traefik/whoami:v1.10.3\n",
+        "desired": "present",
+        "domain": "who.example.com",
+        "env": {},
+        "files": [],
+        "firstRelease": false,
+        "gitBaseDir": "",
+        "gitBranch": null,
+        "gitBuildContextRoot": false,
+        "gitKey": null,
+        "gitRepo": null,
+        "gitToken": null,
+        "internalPort": 80,
+        "needsBackup": false,
+        "purgeData": false,
+        "releaseId": "6b1e3f2a-9c4d-4e8f-a1b2-c3d4e5f60718",
+        "releaseStatus": "pending",
+        "rollbackCompose": "name: ${APP_SLUG}\nservices:\n  app:\n    image: traefik/whoami:v1.10.2\n",
+        "routes": [
+          {
+            "domain": "who.example.com",
+            "policies": [],
+            "port": 80,
+            "service": "app"
+          }
+        ],
+        "slug": "whoami",
+        "sourceType": "template"
+      }
+    ],
+    "denyIps": [
+      "198.51.100.0/24",
+      "203.0.113.7",
+      "2001:db8:dead::/64"
+    ],
+    "objectStorage": {
+      "accessKeyId": "test-only-access-key-id",
+      "addressing": "path",
+      "bucket": "acme-backups",
+      "caCertificate": null,
+      "checksumMode": "sha256",
+      "endpoint": "https://s3.example.net",
+      "keyFingerprint": "test-only-key-fingerprint",
+      "multipart": true,
+      "partSizeBytes": 16777216,
+      "prefix": "hosts/h1/",
+      "probeRequestedAt": "",
+      "region": "ru-central1",
+      "secretAccessKey": "",
+      "sseKmsKeyId": null,
+      "sseMode": "none"
+    },
+    "platformSubdomainBase": "apps.example.net",
+    "registries": [
+      {
+        "registry": "ghcr.io",
+        "token": "",
+        "username": "acme-bot"
+      }
+    ]
+  },
+  "secrets": [
+    "app/backend/gitKey",
+    "app/sigma-supabase/env/POSTGRES_PASSWORD",
+    "app/site/gitToken",
+    "app/supabase/env/JWT_SECRET",
+    "objectStorage/secretAccessKey",
+    "registry/ghcr.io/token"
+  ],
+  "values": {
+    "app/backend/gitKey": "-----BEGIN OPENSSH PRIVATE KEY-----\ntest\n-----END OPENSSH PRIVATE KEY-----\n",
+    "app/sigma-supabase/env/POSTGRES_PASSWORD": "test-only-password",
+    "app/site/gitToken": "ghs_testonlyinstallationtoken",
+    "app/supabase/env/JWT_SECRET": "test-only-jwt-secret-value-32-bytes",
+    "objectStorage/secretAccessKey": "test-only-secret-access-key",
+    "registry/ghcr.io/token": "test-only-token"
+  }
+}

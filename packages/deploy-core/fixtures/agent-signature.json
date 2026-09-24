@@ -1,0 +1,9 @@
+{
+  "body": "{\"releaseId\":\"9f1c0e42-1111-4222-8333-444455556666\",\"status\":\"healthy\"}",
+  "fingerprint": "fa2c5e76886abdef6ef82d0075120b354575b2509699a64954f032c275244fc4",
+  "method": "POST",
+  "path": "/api/deploy/agent/report",
+  "publicKey": "ebVWLo/mVPlAeLES6KmLp5AfhTrmlb7X4OORC60ElmQ=",
+  "signature": "WlNChN0hgWWM9qE2PaDWvIQa12pOmdxhITEyj8D7uHjEqwj4sTJVm4A+uW43BzoSjPtA0NLXZzXtjoAAl/EfBw==",
+  "timestamp": "1800000000"
+}

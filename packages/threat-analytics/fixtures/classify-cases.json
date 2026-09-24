@@ -1,0 +1,67 @@
+{
+  "_comment": "Общая фикстура классификации HTTP-запроса. Читается тремя реализациями: TS (classify.ts), awk (monitor-push.sh) и Go (deploy-agent/threat.go). Расхождение любой из них ломает CI — молчаливый дрейф правил между агентами уже случался.",
+  "cases": [
+    { "name": "свой uptime-зонд на 404 — не событие", "path": "/nope", "status": 404, "userAgent": "ScopeworkUptime/1.0", "category": null },
+    { "name": "свой health-зонд на 404 — не событие", "path": "/health", "status": 404, "userAgent": "ScopeworkHealth/1.0", "category": null },
+    { "name": "свой краулер аудита на .env — не событие", "path": "/.env", "status": 404, "userAgent": "ScopeworkSiteAuditBot/1.0", "category": null },
+    { "name": "такт агента развёртывания — не событие", "path": "/api/deploy/agent/tick", "status": 404, "userAgent": "tracedocs-deploy-agent/abc123", "category": null },
+    { "name": "чужой агент с похожим именем событием остаётся", "path": "/.env", "status": 404, "userAgent": "tracedocs-fake-scanner/1.0", "category": "env_probe" },
+
+    { "name": "разведка .env", "path": "/.env", "status": 404, "category": "env_probe" },
+    { "name": "разведка .git", "path": "/.git/config", "status": 404, "category": "env_probe" },
+    { "name": "разведка wp-config", "path": "/wp-config.php.bak", "status": 404, "category": "env_probe" },
+    { "name": "разведка .aws", "path": "/.aws/credentials", "status": 403, "category": "env_probe" },
+    { "name": "разведка actuator", "path": "/actuator/env", "status": 200, "category": "env_probe" },
+
+    { "name": "CMS wp-admin", "path": "/wp-admin/install.php", "status": 404, "category": "cms_scan" },
+    { "name": "CMS wp-login", "path": "/wp-login.php", "status": 404, "category": "cms_scan" },
+    { "name": "CMS xmlrpc", "path": "/xmlrpc.php", "status": 405, "category": "cms_scan" },
+    { "name": "CMS phpmyadmin", "path": "/phpmyadmin/index.php", "status": 404, "category": "cms_scan" },
+    { "name": "CMS administrator", "path": "/administrator/index.php", "status": 404, "category": "cms_scan" },
+
+    { "name": "брутфорс на /login", "path": "/login", "status": 401, "category": "auth_brute" },
+    { "name": "брутфорс на /api/auth/callback", "path": "/api/auth/callback", "status": 401, "category": "auth_brute" },
+    { "name": "брутфорс на /sign-in", "path": "/sign-in", "status": 403, "category": "auth_brute" },
+    { "name": "брутфорс на /reset-password", "path": "/reset-password", "status": 401, "category": "auth_brute" },
+    { "name": "брутфорс на /admin", "path": "/admin", "status": 403, "category": "auth_brute" },
+    { "name": "секрет в query не мешает классификации", "path": "/reset-password?token=SECRET", "status": 401, "category": "auth_brute" },
+
+    { "name": "rate limit на auth-пути", "path": "/api/publish/verify-password", "status": 429, "category": "rate_limited" },
+    { "name": "rate limit вне auth-пути игнорируется", "path": "/api/health", "status": 429, "category": null },
+    { "name": "вход Supabase по паролю под пределом", "path": "/auth/v1/token?grant_type=password", "status": 429, "category": "rate_limited" },
+
+    { "name": "ADR-0060: json-файл с auth в имени — файл, а не вход", "path": "/auth.json", "status": 429, "category": null },
+    { "name": "ADR-0060: token.txt — файл, а не вход", "path": "/token.txt", "status": 429, "category": null },
+    { "name": "ADR-0060: auth.log — файл, а не вход", "path": "/auth.log", "status": 403, "category": null },
+    { "name": "ADR-0060: копия страницы входа .bak — файл, а не вход", "path": "/login.php.bak", "status": 429, "category": null },
+    { "name": "ADR-0060: скрытый файл с token в имени — не вход", "path": "/.vault-token", "status": 429, "category": null },
+    { "name": "ADR-0060: скрытый каталог с auth внутри пути — не вход", "path": "/.svn/auth/svn.simple", "status": 429, "category": null },
+    { "name": "ADR-0060: json в каталоге users с admin в имени — файл", "path": "/chef/data_bags/users/admin.json", "status": 403, "category": null },
+    { "name": "ADR-0060, ревью: слэш в конце пути не делает файл входом", "path": "/auth.json/", "status": 429, "category": null },
+    { "name": "ADR-0060, ревью: слэш в конце у json-файла токена", "path": "/api/token.json/", "status": 429, "category": null },
+    { "name": "ADR-0060: PHP-страница под admin остаётся входом — подбор отличает концентрация", "path": "/admin/index.php", "status": 401, "category": "auth_brute" },
+
+    { "name": "ADR-0060: wp-admin во вложенном каталоге", "path": "/blog/wp-admin/setup-config.php", "status": 404, "category": "cms_scan" },
+    { "name": "ADR-0060: wp-config без косой перед ним — не разведка секрета", "path": "/old-wp-config-notes", "status": 404, "category": "api_fuzz" },
+    { "name": "ADR-0060: длинное имя .env классифицируется до маскировки токенов", "path": "/.env.production.local.backup", "status": 404, "category": "env_probe" },
+    { "name": "ADR-0060: отказ кромки 444 на .env — всё равно разведка", "path": "/.env", "status": 444, "category": "env_probe" },
+
+    { "name": "404 на неизвестном пути", "path": "/random-endpoint", "status": 404, "category": "api_fuzz" },
+    { "name": "404 на статике не считается перебором", "path": "/assets/logo.png", "status": 404, "category": null },
+    { "name": "404 на css не считается перебором", "path": "/build/app.a1b2c3.css", "status": 404, "category": null },
+    { "name": "404 на шрифте не считается перебором", "path": "/fonts/inter.woff2", "status": 404, "category": null },
+    { "name": "404 на favicon не считается перебором", "path": "/favicon.ico", "status": 404, "category": null },
+
+    { "name": "authentic-goods — не auth-путь", "path": "/api/products/authentic-goods", "status": 403, "category": null },
+    { "name": "administrative-reform — не auth-путь", "path": "/blog/administrative-reform", "status": 403, "category": null },
+    { "name": "tokens-usage — не auth-путь", "path": "/api/tokens-usage", "status": 403, "category": null },
+    { "name": "login в query — не auth-путь", "path": "/api/products?filter=login", "status": 403, "category": null },
+
+    { "name": "обычный успешный запрос", "path": "/", "status": 200, "category": null },
+    { "name": "обычная ошибка сервера", "path": "/api/report", "status": 500, "category": null },
+
+    { "name": "сканер по User-Agent", "path": "/", "status": 200, "userAgent": "Mozilla/5.00 (Nikto/2.5.0)", "category": "scanner_ua" },
+    { "name": "sqlmap по User-Agent", "path": "/search", "status": 200, "userAgent": "sqlmap/1.7.2#stable", "category": "scanner_ua" },
+    { "name": "обычный браузер сканером не считается", "path": "/", "status": 200, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36", "category": null }
+  ]
+}

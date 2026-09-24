@@ -1,0 +1,1072 @@
+{
+  "commandKinds": [
+    "apply",
+    "backup",
+    "restore",
+    "export",
+    "migrate-data",
+    "start-stack",
+    "stop-stack",
+    "inventory"
+  ],
+  "maxBytes": 4096,
+  "cases": [
+    {
+      "name": "файла нет — прежнее поведение",
+      "text": null,
+      "expect": {
+        "state": "absent"
+      }
+    },
+    {
+      "name": "пример из ADR-0095 п. 1 дословно",
+      "text": "# /etc/tracedocs/agent-policy.conf — root:root 0644\nversion=1\nmode=observe                  # observe | deploy\ncommands=inventory            # через запятую, только из закрытого списка (п. 4)\ndeploy_agent_updates=manual   # manual | auto | pinned 2.2.0\nmonitor_agent_updates=manual  # manual | auto | pinned 1.1.0\ncontainer_logs=deny           # allow | deny\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "только version=1, без перевода строки в конце: всё строгое",
+      "text": "version=1",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "mode=deploy без commands — все виды",
+      "text": "version=1\nmode=deploy\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "mode=observe без commands — пустой список",
+      "text": "version=1\nmode=observe\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "commands= при deploy — явный пустой список",
+      "text": "version=1\nmode=deploy\ncommands=\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "commands с пустыми элементами, пробелами и повтором",
+      "text": "version=1\nmode=deploy\ncommands=backup,,restore, backup\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "backup",
+          "restore"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "commands в чужом порядке — действующий список в порядке закрытого",
+      "text": "version=1\nmode=deploy\ncommands=inventory,stop-stack,apply\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "все восемь видов явно",
+      "text": "version=1\nmode=deploy\ncommands=apply,backup,restore,export,migrate-data,start-stack,stop-stack,inventory\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "observe с commands=apply,inventory — список докладывается как записан",
+      "text": "version=1\nmode=observe\ncommands=apply,inventory\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [
+          "apply",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "незнакомый вид команды",
+      "text": "version=1\nmode=deploy\ncommands=backup,shell\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "вид команды в другом регистре",
+      "text": "version=1\nmode=deploy\ncommands=Backup\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "пустой файл — нет version",
+      "text": "",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "только комментарии и пустые строки — нет version",
+      "text": "# политика\n\n   \n# конец\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "нет version",
+      "text": "mode=deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "version=2",
+      "text": "version=2\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "version=01",
+      "text": "version=01\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "version=1.0",
+      "text": "version=1.0\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "незнакомый ключ",
+      "text": "version=1\nlogs=allow\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "ключ в другом регистре",
+      "text": "version=1\nMODE=deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "повтор ключа с разными значениями",
+      "text": "version=1\nmode=observe\nmode=deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "повтор ключа с тем же значением",
+      "text": "version=1\nmode=deploy\nmode=deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "строка без =",
+      "text": "version=1\nmode deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "пустой ключ",
+      "text": "version=1\n=deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "= внутри значения",
+      "text": "version=1\nmode=deploy=yes\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "пустое значение mode",
+      "text": "version=1\nmode=\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "mode не из списка (регистр)",
+      "text": "version=1\nmode=Deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "container_logs=allow",
+      "text": "version=1\ncontainer_logs=allow\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "allow"
+      }
+    },
+    {
+      "name": "container_logs не из списка",
+      "text": "version=1\ncontainer_logs=yes\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "auto в обоих ключах обновлений",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "auto",
+        "monitorAgentUpdates": "auto",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "observe + auto — в файле записано auto (действующее решает агент по ключу выпуска)",
+      "text": "version=1\ndeploy_agent_updates=auto\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "auto",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned с одним пробелом",
+      "text": "version=1\ndeploy_agent_updates=pinned 2.2.0\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "pinned 2.2.0",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned с двумя пробелами — каноническая запись с одним",
+      "text": "version=1\ndeploy_agent_updates=pinned  2.2.0\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "pinned 2.2.0",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned через таб — каноническая запись с пробелом",
+      "text": "version=1\nmonitor_agent_updates=pinned\t1.1.0\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "pinned 1.1.0",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned 0.0.0 и многозначные разряды",
+      "text": "version=1\ndeploy_agent_updates=pinned 10.20.30\nmonitor_agent_updates=pinned 0.0.0\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "pinned 10.20.30",
+        "monitorAgentUpdates": "pinned 0.0.0",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned 02.1.0 — ведущий ноль",
+      "text": "version=1\ndeploy_agent_updates=pinned 02.1.0\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned 2.1 — два разряда",
+      "text": "version=1\ndeploy_agent_updates=pinned 2.1\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned без версии",
+      "text": "version=1\ndeploy_agent_updates=pinned\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned слитно с версией",
+      "text": "version=1\ndeploy_agent_updates=pinned2.2.0\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "Pinned с заглавной",
+      "text": "version=1\ndeploy_agent_updates=Pinned 2.2.0\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "pinned с хвостом после версии",
+      "text": "version=1\ndeploy_agent_updates=pinned 2.2.0 beta\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "пустое значение обновлений",
+      "text": "version=1\nmonitor_agent_updates=\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "окончания строк CRLF",
+      "text": "version=1\r\nmode=deploy\r\ncommands=backup\r\ncontainer_logs=allow\r\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "backup"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "allow"
+      }
+    },
+    {
+      "name": "хвостовой комментарий после значения",
+      "text": "version=1\nmode=deploy   # исполнение включено 23.09\ndeploy_agent_updates=pinned 2.2.0 # держим\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "pinned 2.2.0",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "# вплотную к значению",
+      "text": "version=1#первая\nmode=deploy#вторая\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "пробелы и табы вокруг строки, ключа и значения",
+      "text": "\t version \t=\t 1 \t\n  mode =  deploy  \n\tcommands = apply , inventory\t\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "строки из пробелов и табов пропускаются",
+      "text": "version=1\n \t \n\t\nmode=deploy\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "нулевой байт в комментарии",
+      "text": "version=1\nmode=deploy # до\u0000после\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "нулевой байт в значении",
+      "text": "version=1\nmode=deploy\ncommands=backup\u0000\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "BOM в начале файла — ключ не version",
+      "text": "﻿version=1\nmode=deploy\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "ровно 4096 байт",
+      "text": "version=1\nmode=deploy\ncommands=backup\n# .......padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.padding.\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "backup"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "4097 байт",
+      "text": "version=1\nmode=deploy\ncommands=backup\n# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "4096 байт с кириллицей в комментарии",
+      "text": "version=1\nmode=deploy\ncommands=backup\n# .яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "backup"
+        ],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "4097 байт из-за кириллицы: символов меньше 4096, байтов больше",
+      "text": "version=1\nmode=deploy\ncommands=backup\n# яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "no_major у обоих агентов — значение платформы понято на хосте",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=no_major\nmonitor_agent_updates=no_major\n",
+      "expect": {
+        "state": "valid",
+        "mode": "deploy",
+        "commands": [
+          "apply",
+          "backup",
+          "restore",
+          "export",
+          "migrate-data",
+          "start-stack",
+          "stop-stack",
+          "inventory"
+        ],
+        "deployAgentUpdates": "no_major",
+        "monitorAgentUpdates": "no_major",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "no_major с пробелами вокруг и хвостовым комментарием",
+      "text": "version=1\ndeploy_agent_updates =  no_major   # кроме крупных\n",
+      "expect": {
+        "state": "valid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "no_major",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "no-major через дефис — негоден",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=no-major\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "NO_MAJOR заглавными — негоден",
+      "text": "version=1\nmode=deploy\nmonitor_agent_updates=NO_MAJOR\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    },
+    {
+      "name": "no_major с версией — негоден: это не пин",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=no_major 2.3.0\n",
+      "expect": {
+        "state": "invalid",
+        "mode": "observe",
+        "commands": [],
+        "deployAgentUpdates": "manual",
+        "monitorAgentUpdates": "manual",
+        "containerLogs": "deny"
+      }
+    }
+  ],
+  "updateCases": [
+    {
+      "name": "файла нет — решает платформа, ключи ни при чём",
+      "text": null,
+      "releaseKeys": false,
+      "deployEffective": "auto",
+      "monitorEffective": "auto"
+    },
+    {
+      "name": "observe + auto без ключа выпуска — как manual",
+      "text": "version=1\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "observe + auto с ключом выпуска — auto",
+      "text": "version=1\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": true,
+      "deployEffective": "auto",
+      "monitorEffective": "auto"
+    },
+    {
+      "name": "observe + pinned без ключа выпуска — как manual: номер без подписи ничего не доказывает",
+      "text": "version=1\ndeploy_agent_updates=pinned 2.3.0\nmonitor_agent_updates=pinned 1.2.0\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "observe + pinned с ключом выпуска — pinned",
+      "text": "version=1\ndeploy_agent_updates=pinned 2.3.0\nmonitor_agent_updates=pinned 1.2.0\n",
+      "releaseKeys": true,
+      "deployEffective": "pinned 2.3.0",
+      "monitorEffective": "pinned 1.2.0"
+    },
+    {
+      "name": "deploy + pinned без ключа выпуска — как manual",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=pinned 2.3.0\nmonitor_agent_updates=pinned 1.2.0\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy + pinned с ключом выпуска — pinned",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=pinned 2.3.0\nmonitor_agent_updates=pinned 1.2.0\n",
+      "releaseKeys": true,
+      "deployEffective": "pinned 2.3.0",
+      "monitorEffective": "pinned 1.2.0"
+    },
+    {
+      "name": "deploy без commands (все виды) + auto без ключа — deploy auto, мониторинг manual: container_logs не задан, значит deny",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": false,
+      "deployEffective": "auto",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy с полным списком commands + auto без ключа — deploy auto, мониторинг manual: container_logs не задан, значит deny",
+      "text": "version=1\nmode=deploy\ncommands=apply,backup,restore,export,migrate-data,start-stack,stop-stack,inventory\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": false,
+      "deployEffective": "auto",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy с неполным списком commands + auto без ключа — как manual",
+      "text": "version=1\nmode=deploy\ncommands=apply,backup\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy с неполным списком commands + auto с ключом — auto",
+      "text": "version=1\nmode=deploy\ncommands=apply,backup\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": true,
+      "deployEffective": "auto",
+      "monitorEffective": "auto"
+    },
+    {
+      "name": "deploy с пустым списком commands + auto без ключа — как manual",
+      "text": "version=1\nmode=deploy\ncommands=\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "manual остаётся manual и без ключа",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=manual\nmonitor_agent_updates=manual\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "manual остаётся manual и с ключом",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=manual\nmonitor_agent_updates=manual\n",
+      "releaseKeys": true,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "негодный файл — manual при любых ключах",
+      "text": "mode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\n",
+      "releaseKeys": true,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "правила агентов независимы: deploy auto со всеми видами, мониторинг pinned без ключа",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=pinned 1.2.0\n",
+      "releaseKeys": false,
+      "deployEffective": "auto",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy со всеми видами + container_logs=allow + auto без ключа — auto у обоих",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\ncontainer_logs=allow\n",
+      "releaseKeys": false,
+      "deployEffective": "auto",
+      "monitorEffective": "auto"
+    },
+    {
+      "name": "deploy со всеми видами + container_logs=deny + auto без ключа — мониторинг manual: бандл снял бы запрет логов",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\ncontainer_logs=deny\n",
+      "releaseKeys": false,
+      "deployEffective": "auto",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy со всеми видами + container_logs=deny + auto с ключом — auto у обоих",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\ncontainer_logs=deny\n",
+      "releaseKeys": true,
+      "deployEffective": "auto",
+      "monitorEffective": "auto"
+    },
+    {
+      "name": "observe + container_logs=allow + auto без ключа — manual у обоих",
+      "text": "version=1\ndeploy_agent_updates=auto\nmonitor_agent_updates=auto\ncontainer_logs=allow\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "observe + no_major без ключа выпуска — как manual: граница MAJOR — это номер, а номер без подписи ничего не доказывает",
+      "text": "version=1\ndeploy_agent_updates=no_major\nmonitor_agent_updates=no_major\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "observe + no_major с ключом выпуска — no_major",
+      "text": "version=1\ndeploy_agent_updates=no_major\nmonitor_agent_updates=no_major\n",
+      "releaseKeys": true,
+      "deployEffective": "no_major",
+      "monitorEffective": "no_major"
+    },
+    {
+      "name": "deploy со всеми видами + container_logs=allow + no_major без ключа — как manual у обоих, как pinned",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=no_major\nmonitor_agent_updates=no_major\ncontainer_logs=allow\n",
+      "releaseKeys": false,
+      "deployEffective": "manual",
+      "monitorEffective": "manual"
+    },
+    {
+      "name": "deploy со всеми видами + container_logs=allow + no_major с ключом — no_major у обоих",
+      "text": "version=1\nmode=deploy\ndeploy_agent_updates=no_major\nmonitor_agent_updates=no_major\ncontainer_logs=allow\n",
+      "releaseKeys": true,
+      "deployEffective": "no_major",
+      "monitorEffective": "no_major"
+    }
+  ],
+  "permitCases": [
+    {
+      "name": "auto — любая цель, и крупная тоже",
+      "rule": "auto",
+      "current": "2.2.0",
+      "target": "3.0.0",
+      "permitted": true
+    },
+    {
+      "name": "manual — никакая цель",
+      "rule": "manual",
+      "current": "2.2.0",
+      "target": "2.3.0",
+      "permitted": false
+    },
+    {
+      "name": "pinned — ровно пин и вверх",
+      "rule": "pinned 2.3.0",
+      "current": "2.2.0",
+      "target": "2.3.0",
+      "permitted": true
+    },
+    {
+      "name": "pinned — другая цель",
+      "rule": "pinned 2.3.0",
+      "current": "2.2.0",
+      "target": "2.4.0",
+      "permitted": false
+    },
+    {
+      "name": "pinned — пин не новее текущей",
+      "rule": "pinned 2.3.0",
+      "current": "2.3.0",
+      "target": "2.3.0",
+      "permitted": false
+    },
+    {
+      "name": "no_major — следующая минорная",
+      "rule": "no_major",
+      "current": "2.2.0",
+      "target": "2.3.0",
+      "permitted": true
+    },
+    {
+      "name": "no_major — патч",
+      "rule": "no_major",
+      "current": "2.2.0",
+      "target": "2.2.1",
+      "permitted": true
+    },
+    {
+      "name": "no_major — смена MAJOR",
+      "rule": "no_major",
+      "current": "2.2.0",
+      "target": "3.0.0",
+      "permitted": false
+    },
+    {
+      "name": "no_major — разряды числами: 9 → 10 это смена MAJOR",
+      "rule": "no_major",
+      "current": "9.1.0",
+      "target": "10.0.0",
+      "permitted": false
+    },
+    {
+      "name": "no_major — разряды числами: 1.9.0 → 1.10.0 в том же MAJOR",
+      "rule": "no_major",
+      "current": "1.9.0",
+      "target": "1.10.0",
+      "permitted": true
+    },
+    {
+      "name": "no_major — двузначный MAJOR без смены",
+      "rule": "no_major",
+      "current": "10.0.0",
+      "target": "10.1.0",
+      "permitted": true
+    },
+    {
+      "name": "no_major — у цели нет номера выпуска",
+      "rule": "no_major",
+      "current": "2.2.0",
+      "target": "",
+      "permitted": false
+    },
+    {
+      "name": "no_major — номер цели не MAJOR.MINOR.PATCH",
+      "rule": "no_major",
+      "current": "2.2.0",
+      "target": "2.3",
+      "permitted": false
+    },
+    {
+      "name": "no_major — текущая версия не читается: MAJOR не с чем сравнить",
+      "rule": "no_major",
+      "current": "19cbc18d",
+      "target": "2.3.0",
+      "permitted": false
+    }
+  ]
+}

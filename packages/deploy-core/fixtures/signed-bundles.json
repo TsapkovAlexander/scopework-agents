@@ -1,0 +1,1230 @@
+{
+  "rootPublicKeys": [
+    "5/FioQvsVZr+oZXk3OhLaVaNXSywlj60RsBoXisX8vA=",
+    "AgvUJ0RrcjQk2A0srTUro982SdDvj6rgyn6yVEOUGyk="
+  ],
+  "now": "2026-09-17T12:00:00Z",
+  "agentFingerprint": "fa2c5e76886abdef6ef82d0075120b354575b2509699a64954f032c275244fc4",
+  "latch": {
+    "agentFingerprint": "fa2c5e76886abdef6ef82d0075120b354575b2509699a64954f032c275244fc4",
+    "seq": 4,
+    "payloadSha256": "0f9b4a46a55bed9608b4c38a4c48c79905f3f84612376c4363b5608ee977dac7",
+    "maxCertSerial": 7
+  },
+  "valid": {
+    "bundle": {
+      "envelope": {
+        "payloadType": "application/vnd.scopework.host-state+json;v=0",
+        "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+        "signatures": [
+          {
+            "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+            "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+          }
+        ]
+      },
+      "certificate": {
+        "payloadType": "application/vnd.scopework.signer-cert+json",
+        "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+        "signatures": [
+          {
+            "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+            "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+          }
+        ]
+      }
+    },
+    "secrets": {
+      "app/backend/env/DB_PASSWORD": "test-only-db-password",
+      "app/backend/gitKey": "test-only-git-key",
+      "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+      "app/site/gitToken": "test-only-git-token",
+      "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+      "registry/ghcr.io/token": "test-only-registry-token"
+    },
+    "state": {
+      "apps": [
+        {
+          "compose": "",
+          "env": {
+            "DB_PASSWORD": "test-only-db-password",
+            "NODE_ENV": "production"
+          },
+          "gitKey": "test-only-git-key",
+          "gitToken": null,
+          "slug": "backend",
+          "sourceType": "git"
+        },
+        {
+          "compose": "",
+          "env": {},
+          "gitKey": null,
+          "gitToken": "test-only-git-token",
+          "slug": "site",
+          "sourceType": "git"
+        },
+        {
+          "compose": "name: ${APP_SLUG}\nservices:\n  smtp:\n    image: example/mail:1\n    ports:\n      - \"25:25\"\n",
+          "env": {
+            "MAIL_DOMAIN": "mail.example.com",
+            "SMTP_PASSWORD": "test-only-smtp-password"
+          },
+          "gitKey": null,
+          "gitToken": null,
+          "slug": "mail",
+          "sourceType": "template"
+        }
+      ],
+      "denyIps": [],
+      "objectStorage": {
+        "accessKeyId": "test-only-access-key",
+        "bucket": "acme-backups",
+        "secretAccessKey": "test-only-object-storage-secret"
+      },
+      "platformSubdomainBase": "",
+      "registries": [
+        {
+          "registry": "ghcr.io",
+          "token": "test-only-registry-token",
+          "username": "acme-bot"
+        }
+      ]
+    },
+    "allowancesByCompose": {
+      "f06e1240eb5bc5d9586f879cdfb4502465128360bee7c5fde8aad6891ca3db23": [
+        {
+          "kind": "publish_port",
+          "service": "smtp",
+          "port": 25,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "next": {
+      "agentFingerprint": "fa2c5e76886abdef6ef82d0075120b354575b2509699a64954f032c275244fc4",
+      "seq": 5,
+      "payloadSha256": "9358342f66185530f0ef4a02703c51ccce8cd180cd8f162199c6248b7d0e9280",
+      "maxCertSerial": 8
+    }
+  },
+  "rejected": [
+    {
+      "name": "bundle-extra-field",
+      "bundle": {
+        "manifest": {},
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "envelope_malformed"
+    },
+    {
+      "name": "bundle-without-certificate",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": null
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "envelope_malformed"
+    },
+    {
+      "name": "envelope-two-signatures",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            },
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "envelope_malformed"
+    },
+    {
+      "name": "cert-not-from-root",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "b4cb4b93c4027ce3d455f29a17582ec2068472ba323f850bf9c12c8449b8650f",
+              "sig": "xdRgTYaI0Ajp/Vyu+1WdRBp421AvRnIh+e0ZzuO8NDImYCXYedoTV5iBg0CqEk5T7w8q1rw7aYmi1Ld+WJYtBw=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_not_from_root"
+    },
+    {
+      "name": "cert-signed-by-work-key",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "4Gan37RjhU86zuvs9MtiF1sv/d6G0J3sI875EuxpwIA9GapxhLbCqzd9RY5x3FF3CT62lzt8YiwzfKSfyCY5Dg=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_not_from_root"
+    },
+    {
+      "name": "cert-payload-type-swapped",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "TNtQajLIXn47uU3Vy2eYUcXYLUh1IxR46khrYbKOACU9vRopkLgfHIMm8ejkm7Y44eIa+Yb4sjoNiOj0ImPpCg=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_not_from_root"
+    },
+    {
+      "name": "grant-presented-as-certificate",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.template-grant+json",
+          "payload": "eyJ2IjoxLCJjb21wb3NlU2hhMjU2IjoiZjA2ZTEyNDBlYjViYzVkOTU4NmY4NzljZGZiNDUwMjQ2NTEyODM2MGJlZTdjNWZkZThhYWQ2ODkxY2EzZGIyMyIsImFsbG93YW5jZXMiOlt7ImtpbmQiOiJwdWJsaXNoX3BvcnQiLCJzZXJ2aWNlIjoic210cCIsInBvcnQiOjI1LCJwcm90b2NvbCI6InRjcCJ9XSwibm90ZXMiOiLRiNCw0LHQu9C+0L0g0L/QvtGH0YLRizogU01UUCDQvdCwIDI1L3RjcCJ9",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "D09vT/C3L+3gTEQr/TILJ2EACYOYDK1ghTH4kytG72TiONQVpsqQNZR6bFig81byj4l8XdIHEvwLgSONP+MlAw=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_invalid"
+    },
+    {
+      "name": "cert-key-id-mismatch",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImI0Y2I0YjkzYzQwMjdjZTNkNDU1ZjI5YTE3NTgyZWMyMDY4NDcyYmEzMjNmODUwYmY5YzEyYzg0NDliODY1MGYiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "jhOpYfGj4AbXan4YdzVuiib5IUnJU9CahaAkB4EFeMEXFjj3dxMoe8a8Dr8VwUQgBnwpbb9Mq0ymyd8y2X49AA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_invalid"
+    },
+    {
+      "name": "cert-validity-over-45-days",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMTAtMTZUMDA6MDA6MDFaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "BQ2zdsmEp5VsPHhBYMzAHVCN+zLJZHQ4EJQzBUdHXex7oP488PoQ9LqI488Bff+1ALsq1/VLddWTrOdj1tGhCw=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_validity_too_long"
+    },
+    {
+      "name": "cert-not-before-beyond-skew",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0xN1QxMjowNTowMVoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "MYJFurntpEt4t8mZgG6RqPD4hBW5fwicQpJfk1ozMy48yu1HZctqP5dmi32IIANAXLhLeDI/6c+ReAVtiO2VBQ=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_not_yet_valid"
+    },
+    {
+      "name": "cert-expired",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMDktMTdUMTE6NTk6NTlaIiwibm90QmVmb3JlIjoiMjAyNi0wOC0yMFQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "hK+JqRuuoDr0Xp+uwA/bDbAWyukzBXzTzGK6xeXXerSZHqmPVSeBAd7rgLZJDy7TVRmKhEGIOPUV8l7NYuzsAQ=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_expired"
+    },
+    {
+      "name": "cert-wrong-purpose",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImNhdGFsb2ctdGVtcGxhdGUiXSwic2VyaWFsIjo4LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "lEnm+LLyhR6j+M3AMJiF/KGKE/Rwwoy5R7AcgvavTb8lzTtXUNbuuXz1kMQ2MezLfjFE80wz0HloN0xoBwToCA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_purpose"
+    },
+    {
+      "name": "cert-superseded",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJrZXlJZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJwdWJsaWNLZXkiOiJyY0ZBRWZndEhGYlpWcXBQblhQWWhZTmhwZ1lFaFNYZzBJeGpqY2RkMk1jPSIsInB1cnBvc2VzIjpbImhvc3Qtc3RhdGUiXSwic2VyaWFsIjo2LCJ2IjoxfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "3lqnxQXI9cDAPVIVycmEZYZJ0kgVSOFK27UegsNKscvD7eulKFD6L+NnqWJb9TaZkYdKHWFQ/N35U+feLeJaDw=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "cert_superseded"
+    },
+    {
+      "name": "payload-byte-tampered",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "signature_invalid"
+    },
+    {
+      "name": "signature-over-reserialized-json",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "6WsWSmMIq+UOIkjWl60S6QXgaYxiw7UQnZgOdc+PGoTO1yrYuaEHiaQUHjHfr6LyEEFwv3NbjHgR5sSIzemmAw=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "signature_invalid"
+    },
+    {
+      "name": "envelope-signed-by-foreign-key",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "b4cb4b93c4027ce3d455f29a17582ec2068472ba323f850bf9c12c8449b8650f",
+              "sig": "+Tav8USqDTog/eng2j1yglkB4AhOgouJ9KbW10M7zqD+98Y40/CGXGwUmfUA5L5EsqzSAW4ZLtwd+3Wo6xFTDg=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "signature_invalid"
+    },
+    {
+      "name": "content-host-state-v1",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=1",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiJEMDl2VC9DM0wrM2dURVFyL1RJTEoyRUFDWU9ZREsxZ2hUSDRreXRHNzJUaU9OUVZwc3FRTlpSNmJGaWc4MWJ5ajRsOFhkSUhFdndMZ1NPTlArTWxBdz09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiaG9zdElkIjoiMTExMTExMTEtMjIyMi00MzMzLTg0NDQtNTU1NTU1NTU1NTU1IiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsInNlcSI6NX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "EODb7nFtz4wrOY+6QJsHl1c7Zx7cbW8h49VO1x4ej1vFdREMLPOtZA4mr9F9W1X7DbHRMqXRcoaStEZLLSpSDw=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "unsupported_content"
+    },
+    {
+      "name": "payload-extra-field",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiJEMDl2VC9DM0wrM2dURVFyL1RJTEoyRUFDWU9ZREsxZ2hUSDRreXRHNzJUaU9OUVZwc3FRTlpSNmJGaWc4MWJ5ajRsOFhkSUhFdndMZ1NPTlArTWxBdz09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiZXhwaXJlc0F0IjoiMjAyNi0xMC0wMVQwMDowMDowMFoiLCJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJpc3N1ZWRBdCI6IjIwMjYtMDktMTdUMTE6NTk6MDBaIiwic2VxIjo1fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "KorBucelzev4ZndqPIBsedoTJ6T0b3eIDBD93amgt9G6KHsQeofQEETjCcbOuTLRxf9TBIIMnRQpepyMTlWzDg=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "unsupported_content"
+    },
+    {
+      "name": "body-extra-field",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiJEMDl2VC9DM0wrM2dURVFyL1RJTEoyRUFDWU9ZREsxZ2hUSDRreXRHNzJUaU9OUVZwc3FRTlpSNmJGaWc4MWJ5ajRsOFhkSUhFdndMZ1NPTlArTWxBdz09In1dfV0sIm1hbmlmZXN0Ijp7fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sInN0YXRlIjp7ImFwcHMiOlt7ImNvbXBvc2UiOiIiLCJlbnYiOnsiTk9ERV9FTlYiOiJwcm9kdWN0aW9uIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJiYWNrZW5kIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6IiIsImVudiI6e30sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJzaXRlIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6Im5hbWU6ICR7QVBQX1NMVUd9XG5zZXJ2aWNlczpcbiAgc210cDpcbiAgICBpbWFnZTogZXhhbXBsZS9tYWlsOjFcbiAgICBwb3J0czpcbiAgICAgIC0gXCIyNToyNVwiXG4iLCJlbnYiOnsiTUFJTF9ET01BSU4iOiJtYWlsLmV4YW1wbGUuY29tIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJtYWlsIiwic291cmNlVHlwZSI6InRlbXBsYXRlIn1dLCJkZW55SXBzIjpbXSwib2JqZWN0U3RvcmFnZSI6eyJhY2Nlc3NLZXlJZCI6InRlc3Qtb25seS1hY2Nlc3Mta2V5IiwiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwic2VjcmV0QWNjZXNzS2V5IjoiIn0sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInRva2VuIjoiIiwidXNlcm5hbWUiOiJhY21lLWJvdCJ9XX19LCJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJpc3N1ZWRBdCI6IjIwMjYtMDktMTdUMTE6NTk6MDBaIiwic2VxIjo1fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "i8iyxKvxNJlDSzGWcThkY9I9Z76rqLDWIiFeW9+ZADg9yL5aWHO4iAvbO3YnaJMU9w2F3TTrDn7pvWVROdK9Cw=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "unsupported_content"
+    },
+    {
+      "name": "payload-trailing-data",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0ge30=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "ZyzC53/b4sT7ShEFIRJ5jIAGQk0ZUh/OsFilmtDNqmmmHNsYwx7habMLWnyY8WoHqNqh5L44CZFDH/ols0N0Ag=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "payload_malformed"
+    },
+    {
+      "name": "payload-seq-zero",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiJEMDl2VC9DM0wrM2dURVFyL1RJTEoyRUFDWU9ZREsxZ2hUSDRreXRHNzJUaU9OUVZwc3FRTlpSNmJGaWc4MWJ5ajRsOFhkSUhFdndMZ1NPTlArTWxBdz09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiaG9zdElkIjoiMTExMTExMTEtMjIyMi00MzMzLTg0NDQtNTU1NTU1NTU1NTU1IiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsInNlcSI6MH0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "BVdnD+B41Hul1yEA9RjEZD/JBv30jcfx1wbV7pS+Rren58NeGWpCMZ0SbqtbOVnI6Pf/7dePCW9TxsnI0q7LCw=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "payload_malformed"
+    },
+    {
+      "name": "body-without-grants",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sInN0YXRlIjp7ImFwcHMiOlt7ImNvbXBvc2UiOiIiLCJlbnYiOnsiTk9ERV9FTlYiOiJwcm9kdWN0aW9uIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJiYWNrZW5kIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6IiIsImVudiI6e30sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJzaXRlIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6Im5hbWU6ICR7QVBQX1NMVUd9XG5zZXJ2aWNlczpcbiAgc210cDpcbiAgICBpbWFnZTogZXhhbXBsZS9tYWlsOjFcbiAgICBwb3J0czpcbiAgICAgIC0gXCIyNToyNVwiXG4iLCJlbnYiOnsiTUFJTF9ET01BSU4iOiJtYWlsLmV4YW1wbGUuY29tIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJtYWlsIiwic291cmNlVHlwZSI6InRlbXBsYXRlIn1dLCJkZW55SXBzIjpbXSwib2JqZWN0U3RvcmFnZSI6eyJhY2Nlc3NLZXlJZCI6InRlc3Qtb25seS1hY2Nlc3Mta2V5IiwiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwic2VjcmV0QWNjZXNzS2V5IjoiIn0sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInRva2VuIjoiIiwidXNlcm5hbWUiOiJhY21lLWJvdCJ9XX19LCJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJpc3N1ZWRBdCI6IjIwMjYtMDktMTdUMTE6NTk6MDBaIiwic2VxIjo1fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "ljcH/7uwnqe77EfCniAlsOfaQgBnvct+yybEev3hlBPWIDASk+lL+Q7q9u/nx8+U98KXRiZUwrNew0v/doVaAQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "payload_malformed"
+    },
+    {
+      "name": "body-secrets-unsorted",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiJEMDl2VC9DM0wrM2dURVFyL1RJTEoyRUFDWU9ZREsxZ2hUSDRreXRHNzJUaU9OUVZwc3FRTlpSNmJGaWc4MWJ5ajRsOFhkSUhFdndMZ1NPTlArTWxBdz09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiaG9zdElkIjoiMTExMTExMTEtMjIyMi00MzMzLTg0NDQtNTU1NTU1NTU1NTU1IiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsInNlcSI6NX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "xzSaXynx8/IfyqvaZJDDvHaSXPdik+bB8fABolq889xoNtU705FxXn26rHMqLJFtUzxrtNCUraOevCREP24VDA=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "payload_malformed"
+    },
+    {
+      "name": "fingerprint-mismatch",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYiIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiJEMDl2VC9DM0wrM2dURVFyL1RJTEoyRUFDWU9ZREsxZ2hUSDRreXRHNzJUaU9OUVZwc3FRTlpSNmJGaWc4MWJ5ajRsOFhkSUhFdndMZ1NPTlArTWxBdz09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiaG9zdElkIjoiMTExMTExMTEtMjIyMi00MzMzLTg0NDQtNTU1NTU1NTU1NTU1IiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsInNlcSI6NX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "Dn3my/hyyC0/3pMs5jtA/G9bkRbsh3UDm7ICtffoTan9tEbNBZObiIy1ZYWDlTcWj2UGEd38Wyz320JwEA+6Aw=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "fingerprint_mismatch"
+    },
+    {
+      "name": "seq-lower-than-latch",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6MywiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W119fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "7IfbJLl/G/eOF3KlBNdAcqA4INfEIBWacPYOgP+6ug6pE66yrcVsfKdQ5RgvhPjMEhT3UoMbhcGc8CKiBanLCg=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "seq_rollback"
+    },
+    {
+      "name": "seq-equal-other-bytes",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NCwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAxWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W119fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "KtC5RzEvLSSzc3UdxkTL/fOdHCHdvaNOg6nRwVsrufGkEbGp8Ryc8V7SqPUVC4onytU96TiU4BdlCDxocBopBQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "seq_rollback"
+    },
+    {
+      "name": "grant-signed-by-work-key",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKaGJHeHZkMkZ1WTJWeklqcGJleUpyYVc1a0lqb2ljSFZpYkdsemFGOXdiM0owSWl3aWNHOXlkQ0k2TWpVc0luQnliM1J2WTI5c0lqb2lkR053SWl3aWMyVnlkbWxqWlNJNkluTnRkSEFpZlYwc0ltTnZiWEJ2YzJWVGFHRXlOVFlpT2lKbU1EWmxNVEkwTUdWaU5XSmpOV1E1TlRnMlpqZzNPV05rWm1JME5UQXlORFkxTVRJNE16WXdZbVZsTjJNMVptUmxPR0ZoWkRZNE9URmpZVE5rWWpJeklpd2libTkwWlhNaU9pTFJpTkN3MExIUXU5QyswTDBnMEwvUXZ0R0gwWUxSaXpvZ1UwMVVVQ0RRdmRDd0lESTFMM1JqY0NJc0luWWlPakY5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImJhODExMmZhNGJhM2Q2ZjkzNGIyYWQyYWEwNjk2NjAyM2Q1NmUxZWViMGIyZDViNzRiNWRkNmVjMTUyYmE2OTAiLCJzaWciOiJKR2Z0K0s1b1d2NisvNGxUaGpSai9LOW80R3ZmOVlyVmVVS1N3Q043MCtud25pSXllNm12UVp4OU91NU1Eb3VNSWd4Nnh1dUVWR00zMmFFZWtJcGRBZz09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiaG9zdElkIjoiMTExMTExMTEtMjIyMi00MzMzLTg0NDQtNTU1NTU1NTU1NTU1IiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsInNlcSI6NX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "8MvjGlKjKrwJmCRAl0Xjt6IhPGug3dScvObuu0yeUXdCQrbwg3jyvMIOFGhFUee+ADNh9GS6JzDedO8Ome2qAQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "grant_invalid"
+    },
+    {
+      "name": "grant-payload-type-swapped",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5IiwicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJzaWduYXR1cmVzIjpbeyJrZXlpZCI6ImM5NDVjYmYyYTU2MDIwMDIxNDFlMmZiOWQxNzA1NGQ2Y2EwNjk5NTFkZjczZjQ5ZDFmOGFjYTg3Zjk4NzhmNjAiLCJzaWciOiI2RDd1TUZIOWZ0QU93VGNHelcya2J1cGY1QkR4Z1c4N1I4S3FFZ2RGbC9KSk1GTEI2TDF2NXVoVFBHOWNUMFhjcW9mc1BXQnR2QmZ4SlRkSHJUN1lBUT09In1dfV0sInNlY3JldHMiOlsiYXBwL2JhY2tlbmQvZW52L0RCX1BBU1NXT1JEIiwiYXBwL2JhY2tlbmQvZ2l0S2V5IiwiYXBwL21haWwvZW52L1NNVFBfUEFTU1dPUkQiLCJhcHAvc2l0ZS9naXRUb2tlbiIsIm9iamVjdFN0b3JhZ2Uvc2VjcmV0QWNjZXNzS2V5IiwicmVnaXN0cnkvZ2hjci5pby90b2tlbiJdLCJzdGF0ZSI6eyJhcHBzIjpbeyJjb21wb3NlIjoiIiwiZW52Ijp7Ik5PREVfRU5WIjoicHJvZHVjdGlvbiJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoiYmFja2VuZCIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiIiLCJlbnYiOnt9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQifSx7ImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsLCJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSJ9XSwiZGVueUlwcyI6W10sIm9iamVjdFN0b3JhZ2UiOnsiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsImJ1Y2tldCI6ImFjbWUtYmFja3VwcyIsInNlY3JldEFjY2Vzc0tleSI6IiJ9LCJwbGF0Zm9ybVN1YmRvbWFpbkJhc2UiOiIiLCJyZWdpc3RyaWVzIjpbeyJyZWdpc3RyeSI6ImdoY3IuaW8iLCJ0b2tlbiI6IiIsInVzZXJuYW1lIjoiYWNtZS1ib3QifV19fSwiaG9zdElkIjoiMTExMTExMTEtMjIyMi00MzMzLTg0NDQtNTU1NTU1NTU1NTU1IiwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsInNlcSI6NX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "Kxu6ZsQllL31sAtCFKCAO/OvcV7Uzk7QeqfFNQ0jJcyKVcbpBp70bs9oytHgrdbSmkTETQymUFN4odPs+nYBDw=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "grant_invalid"
+    },
+    {
+      "name": "certificate-presented-as-grant",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKMklqb3hMQ0p6WlhKcFlXd2lPamdzSW10bGVVbGtJam9pWW1FNE1URXlabUUwWW1FelpEWm1PVE0wWWpKaFpESmhZVEEyT1RZMk1ESXpaRFUyWlRGbFpXSXdZakprTldJM05HSTFaR1EyWldNeE5USmlZVFk1TUNJc0luQjFZbXhwWTB0bGVTSTZJbkpqUmtGRlptZDBTRVppV2xaeGNGQnVXRkJaYUZsT2FIQm5XVVZvVTFobk1FbDRhbXBqWkdReVRXTTlJaXdpYm05MFFtVm1iM0psSWpvaU1qQXlOaTB3T1Mwd01WUXdNRG93TURvd01Gb2lMQ0p1YjNSQlpuUmxjaUk2SWpJd01qWXRNVEF0TURGVU1EQTZNREE2TURCYUlpd2ljSFZ5Y0c5elpYTWlPbHNpYUc5emRDMXpkR0YwWlNKZGZRPT0iLCJwYXlsb2FkVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5zY29wZXdvcmsuc2lnbmVyLWNlcnQranNvbiIsInNpZ25hdHVyZXMiOlt7ImtleWlkIjoiYzk0NWNiZjJhNTYwMjAwMjE0MWUyZmI5ZDE3MDU0ZDZjYTA2OTk1MWRmNzNmNDlkMWY4YWNhODdmOTg3OGY2MCIsInNpZyI6IkZoQTdZQW5wT1N4cXBHUlRDcmhGeHFCek5mUXdOYytaYXRJN3JldjYwc0J3L2FtS0U3b1B5TXhkSkoyMlNnaitvUW5vbVNGMDFLQ0xHMGVDM3hadUJBPT0ifV19XSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sInN0YXRlIjp7ImFwcHMiOlt7ImNvbXBvc2UiOiIiLCJlbnYiOnsiTk9ERV9FTlYiOiJwcm9kdWN0aW9uIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJiYWNrZW5kIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6IiIsImVudiI6e30sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJzaXRlIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6Im5hbWU6ICR7QVBQX1NMVUd9XG5zZXJ2aWNlczpcbiAgc210cDpcbiAgICBpbWFnZTogZXhhbXBsZS9tYWlsOjFcbiAgICBwb3J0czpcbiAgICAgIC0gXCIyNToyNVwiXG4iLCJlbnYiOnsiTUFJTF9ET01BSU4iOiJtYWlsLmV4YW1wbGUuY29tIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJtYWlsIiwic291cmNlVHlwZSI6InRlbXBsYXRlIn1dLCJkZW55SXBzIjpbXSwib2JqZWN0U3RvcmFnZSI6eyJhY2Nlc3NLZXlJZCI6InRlc3Qtb25seS1hY2Nlc3Mta2V5IiwiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwic2VjcmV0QWNjZXNzS2V5IjoiIn0sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInRva2VuIjoiIiwidXNlcm5hbWUiOiJhY21lLWJvdCJ9XX19LCJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJpc3N1ZWRBdCI6IjIwMjYtMDktMTdUMTE6NTk6MDBaIiwic2VxIjo1fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "ctwGlKHDpkGfSDplJDm0B/8kZgzRDn8migUBt4UqtJGJCF4N/XJ9u8xPSShRzxYg5rrLxzz9DtmOPssog6wVAg=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "grant_invalid"
+    },
+    {
+      "name": "grant-unknown-kind",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKaGJHeHZkMkZ1WTJWeklqcGJleUpyYVc1a0lqb2lZMkZ3WDJGa1pDSXNJbkJ2Y25RaU9qSTFMQ0p3Y205MGIyTnZiQ0k2SW5SamNDSXNJbk5sY25acFkyVWlPaUp6YlhSd0luMWRMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW01dmRHVnpJam9pMFlqUXNOQ3gwTHZRdnRDOUlOQy8wTDdSaDlHQzBZczZJRk5OVkZBZzBMM1FzQ0F5TlM5MFkzQWlMQ0oySWpveGZRPT0iLCJwYXlsb2FkVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5zY29wZXdvcmsudGVtcGxhdGUtZ3JhbnQranNvbiIsInNpZ25hdHVyZXMiOlt7ImtleWlkIjoiYzk0NWNiZjJhNTYwMjAwMjE0MWUyZmI5ZDE3MDU0ZDZjYTA2OTk1MWRmNzNmNDlkMWY4YWNhODdmOTg3OGY2MCIsInNpZyI6IjJDMFBhNC9mWTk0MStFL3h0R3drcUtVQUlyYXJrVEozMFZTcU5XTnFmaXU0N0Npb3FMdEZBT2Z0U1NITFY5UmR4T1E2TGplQmJMbU1IWVJXUTNidkNRPT0ifV19XSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sInN0YXRlIjp7ImFwcHMiOlt7ImNvbXBvc2UiOiIiLCJlbnYiOnsiTk9ERV9FTlYiOiJwcm9kdWN0aW9uIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJiYWNrZW5kIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6IiIsImVudiI6e30sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJzaXRlIiwic291cmNlVHlwZSI6ImdpdCJ9LHsiY29tcG9zZSI6Im5hbWU6ICR7QVBQX1NMVUd9XG5zZXJ2aWNlczpcbiAgc210cDpcbiAgICBpbWFnZTogZXhhbXBsZS9tYWlsOjFcbiAgICBwb3J0czpcbiAgICAgIC0gXCIyNToyNVwiXG4iLCJlbnYiOnsiTUFJTF9ET01BSU4iOiJtYWlsLmV4YW1wbGUuY29tIn0sImdpdEtleSI6bnVsbCwiZ2l0VG9rZW4iOm51bGwsInNsdWciOiJtYWlsIiwic291cmNlVHlwZSI6InRlbXBsYXRlIn1dLCJkZW55SXBzIjpbXSwib2JqZWN0U3RvcmFnZSI6eyJhY2Nlc3NLZXlJZCI6InRlc3Qtb25seS1hY2Nlc3Mta2V5IiwiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwic2VjcmV0QWNjZXNzS2V5IjoiIn0sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInRva2VuIjoiIiwidXNlcm5hbWUiOiJhY21lLWJvdCJ9XX19LCJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJpc3N1ZWRBdCI6IjIwMjYtMDktMTdUMTE6NTk6MDBaIiwic2VxIjo1fQ==",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "CqGxY6CLki+tvsIVbzjGxXhisryAt+KVG5p32J+tGnuY2bSGj/APJmMGXJe+RhSMSs7GaiDxLy5JJKhGgkQBCQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "grant_invalid"
+    },
+    {
+      "name": "grant-bad-digest",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsImJvZHkiOnsiZ3JhbnRzIjpbeyJwYXlsb2FkIjoiZXlKaGJHeHZkMkZ1WTJWeklqcGJleUpyYVc1a0lqb2ljSFZpYkdsemFGOXdiM0owSWl3aWNHOXlkQ0k2TWpVc0luQnliM1J2WTI5c0lqb2lkR053SWl3aWMyVnlkbWxqWlNJNkluTnRkSEFpZlYwc0ltTnZiWEJ2YzJWVGFHRXlOVFlpT2lKaFltTWlMQ0p1YjNSbGN5STZJdEdJMExEUXNkQzcwTDdRdlNEUXY5QyswWWZSZ3RHTE9pQlRUVlJRSU5DOTBMQWdNalV2ZEdOd0lpd2lkaUk2TVgwPSIsInBheWxvYWRUeXBlIjoiYXBwbGljYXRpb24vdm5kLnNjb3Bld29yay50ZW1wbGF0ZS1ncmFudCtqc29uIiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiNC9SeVZMN1JnVWZZcXFObW1GQzIrVmgvZVhBNEJLS2xOVEMwWjE2NG5sZHB0MnVjSSs3dGpOWm0yMGtEM1Y0elB3Ni9saE9iOWNXZzNZZUx5ZS9jQUE9PSJ9XX1dLCJzZWNyZXRzIjpbImFwcC9iYWNrZW5kL2Vudi9EQl9QQVNTV09SRCIsImFwcC9iYWNrZW5kL2dpdEtleSIsImFwcC9tYWlsL2Vudi9TTVRQX1BBU1NXT1JEIiwiYXBwL3NpdGUvZ2l0VG9rZW4iLCJvYmplY3RTdG9yYWdlL3NlY3JldEFjY2Vzc0tleSIsInJlZ2lzdHJ5L2doY3IuaW8vdG9rZW4iXSwic3RhdGUiOnsiYXBwcyI6W3siY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbCwic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0In0seyJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbCwic2x1ZyI6InNpdGUiLCJzb3VyY2VUeXBlIjoiZ2l0In0seyJjb21wb3NlIjoibmFtZTogJHtBUFBfU0xVR31cbnNlcnZpY2VzOlxuICBzbXRwOlxuICAgIGltYWdlOiBleGFtcGxlL21haWw6MVxuICAgIHBvcnRzOlxuICAgICAgLSBcIjI1OjI1XCJcbiIsImVudiI6eyJNQUlMX0RPTUFJTiI6Im1haWwuZXhhbXBsZS5jb20ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbCwic2x1ZyI6Im1haWwiLCJzb3VyY2VUeXBlIjoidGVtcGxhdGUifV0sImRlbnlJcHMiOltdLCJvYmplY3RTdG9yYWdlIjp7ImFjY2Vzc0tleUlkIjoidGVzdC1vbmx5LWFjY2Vzcy1rZXkiLCJidWNrZXQiOiJhY21lLWJhY2t1cHMiLCJzZWNyZXRBY2Nlc3NLZXkiOiIifSwicGxhdGZvcm1TdWJkb21haW5CYXNlIjoiIiwicmVnaXN0cmllcyI6W3sicmVnaXN0cnkiOiJnaGNyLmlvIiwidG9rZW4iOiIiLCJ1c2VybmFtZSI6ImFjbWUtYm90In1dfX0sImhvc3RJZCI6IjExMTExMTExLTIyMjItNDMzMy04NDQ0LTU1NTU1NTU1NTU1NSIsImlzc3VlZEF0IjoiMjAyNi0wOS0xN1QxMTo1OTowMFoiLCJzZXEiOjV9",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "skk2d5ZJ0ooYmjiS5oDRm6e12vbbIsSE1gP/NGV2KMYHDSYOUW5hxaLjy6t6vUC+45JoO3todsEaso/q4ft4CQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "grant_invalid"
+    },
+    {
+      "name": "secrets-value-missing",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "secrets_mismatch"
+    },
+    {
+      "name": "secrets-value-extra",
+      "bundle": {
+        "envelope": {
+          "payloadType": "application/vnd.scopework.host-state+json;v=0",
+          "payload": "eyJob3N0SWQiOiIxMTExMTExMS0yMjIyLTQzMzMtODQ0NC01NTU1NTU1NTU1NTUiLCJhZ2VudEZpbmdlcnByaW50IjoiZmEyYzVlNzY4ODZhYmRlZjZlZjgyZDAwNzUxMjBiMzU0NTc1YjI1MDk2OTlhNjQ5NTRmMDMyYzI3NTI0NGZjNCIsInNlcSI6NSwiaXNzdWVkQXQiOiIyMDI2LTA5LTE3VDExOjU5OjAwWiIsImJvZHkiOnsic3RhdGUiOnsiYXBwcyI6W3sic2x1ZyI6ImJhY2tlbmQiLCJzb3VyY2VUeXBlIjoiZ2l0IiwiY29tcG9zZSI6IiIsImVudiI6eyJOT0RFX0VOViI6InByb2R1Y3Rpb24ifSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoic2l0ZSIsInNvdXJjZVR5cGUiOiJnaXQiLCJjb21wb3NlIjoiIiwiZW52Ijp7fSwiZ2l0S2V5IjpudWxsLCJnaXRUb2tlbiI6bnVsbH0seyJzbHVnIjoibWFpbCIsInNvdXJjZVR5cGUiOiJ0ZW1wbGF0ZSIsImNvbXBvc2UiOiJuYW1lOiAke0FQUF9TTFVHfVxuc2VydmljZXM6XG4gIHNtdHA6XG4gICAgaW1hZ2U6IGV4YW1wbGUvbWFpbDoxXG4gICAgcG9ydHM6XG4gICAgICAtIFwiMjU6MjVcIlxuIiwiZW52Ijp7Ik1BSUxfRE9NQUlOIjoibWFpbC5leGFtcGxlLmNvbSJ9LCJnaXRLZXkiOm51bGwsImdpdFRva2VuIjpudWxsfV0sInJlZ2lzdHJpZXMiOlt7InJlZ2lzdHJ5IjoiZ2hjci5pbyIsInVzZXJuYW1lIjoiYWNtZS1ib3QiLCJ0b2tlbiI6IiJ9XSwiZGVueUlwcyI6W10sInBsYXRmb3JtU3ViZG9tYWluQmFzZSI6IiIsIm9iamVjdFN0b3JhZ2UiOnsiYnVja2V0IjoiYWNtZS1iYWNrdXBzIiwiYWNjZXNzS2V5SWQiOiJ0ZXN0LW9ubHktYWNjZXNzLWtleSIsInNlY3JldEFjY2Vzc0tleSI6IiJ9fSwic2VjcmV0cyI6WyJhcHAvYmFja2VuZC9lbnYvREJfUEFTU1dPUkQiLCJhcHAvYmFja2VuZC9naXRLZXkiLCJhcHAvbWFpbC9lbnYvU01UUF9QQVNTV09SRCIsImFwcC9zaXRlL2dpdFRva2VuIiwib2JqZWN0U3RvcmFnZS9zZWNyZXRBY2Nlc3NLZXkiLCJyZWdpc3RyeS9naGNyLmlvL3Rva2VuIl0sImdyYW50cyI6W3sicGF5bG9hZFR5cGUiOiJhcHBsaWNhdGlvbi92bmQuc2NvcGV3b3JrLnRlbXBsYXRlLWdyYW50K2pzb24iLCJwYXlsb2FkIjoiZXlKMklqb3hMQ0pqYjIxd2IzTmxVMmhoTWpVMklqb2laakEyWlRFeU5EQmxZalZpWXpWa09UVTRObVk0TnpsalpHWmlORFV3TWpRMk5URXlPRE0yTUdKbFpUZGpOV1prWlRoaFlXUTJPRGt4WTJFelpHSXlNeUlzSW1Gc2JHOTNZVzVqWlhNaU9sdDdJbXRwYm1RaU9pSndkV0pzYVhOb1gzQnZjblFpTENKelpYSjJhV05sSWpvaWMyMTBjQ0lzSW5CdmNuUWlPakkxTENKd2NtOTBiMk52YkNJNkluUmpjQ0o5WFN3aWJtOTBaWE1pT2lMUmlOQ3cwTEhRdTlDKzBMMGcwTC9RdnRHSDBZTFJpem9nVTAxVVVDRFF2ZEN3SURJMUwzUmpjQ0o5Iiwic2lnbmF0dXJlcyI6W3sia2V5aWQiOiJjOTQ1Y2JmMmE1NjAyMDAyMTQxZTJmYjlkMTcwNTRkNmNhMDY5OTUxZGY3M2Y0OWQxZjhhY2E4N2Y5ODc4ZjYwIiwic2lnIjoiRDA5dlQvQzNMKzNnVEVRci9USUxKMkVBQ1lPWURLMWdoVEg0a3l0RzcyVGlPTlFWcHNxUU5aUjZiRmlnODFieWo0bDhYZElIRXZ3TGdTT05QK01sQXc9PSJ9XX1dfX0=",
+          "signatures": [
+            {
+              "keyid": "ba8112fa4ba3d6f934b2ad2aa06966023d56e1eeb0b2d5b74b5dd6ec152ba690",
+              "sig": "s6LcOu8j6CCaYS6RDnUJMP3gYW6kBMfTFx24LBJwUf/QIrfbd57astF8K2LnlMU9My+i1KmKbck14wYo4l52DQ=="
+            }
+          ]
+        },
+        "certificate": {
+          "payloadType": "application/vnd.scopework.signer-cert+json",
+          "payload": "eyJ2IjoxLCJzZXJpYWwiOjgsImtleUlkIjoiYmE4MTEyZmE0YmEzZDZmOTM0YjJhZDJhYTA2OTY2MDIzZDU2ZTFlZWIwYjJkNWI3NGI1ZGQ2ZWMxNTJiYTY5MCIsInB1YmxpY0tleSI6InJjRkFFZmd0SEZiWlZxcFBuWFBZaFlOaHBnWUVoU1hnMEl4ampjZGQyTWM9Iiwibm90QmVmb3JlIjoiMjAyNi0wOS0wMVQwMDowMDowMFoiLCJub3RBZnRlciI6IjIwMjYtMTAtMDFUMDA6MDA6MDBaIiwicHVycG9zZXMiOlsiaG9zdC1zdGF0ZSJdfQ==",
+          "signatures": [
+            {
+              "keyid": "c945cbf2a5602002141e2fb9d17054d6ca069951df73f49d1f8aca87f9878f60",
+              "sig": "FhA7YAnpOSxqpGRTCrhFxqBzNfQwNc+ZatI7rev60sBw/amKE7oPyMxdJJ22Sgj+oQnomSF01KCLG0eC3xZuBA=="
+            }
+          ]
+        }
+      },
+      "secrets": {
+        "app/backend/env/DB_PASSWORD": "test-only-db-password",
+        "app/backend/gitKey": "test-only-git-key",
+        "app/mail/env/SMTP_PASSWORD": "test-only-smtp-password",
+        "app/site/env/INJECTED": "test-only-injected",
+        "app/site/gitToken": "test-only-git-token",
+        "objectStorage/secretAccessKey": "test-only-object-storage-secret",
+        "registry/ghcr.io/token": "test-only-registry-token"
+      },
+      "reason": "secrets_mismatch"
+    }
+  ]
+}

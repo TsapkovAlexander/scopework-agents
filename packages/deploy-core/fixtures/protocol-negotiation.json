@@ -1,0 +1,157 @@
+{
+  "platform": {
+    "content": [
+      "host-state/0",
+      "host-state/1"
+    ],
+    "envelopes": [
+      "dsse-ed25519/1"
+    ]
+  },
+  "cases": [
+    {
+      "name": "legacy-agent-without-declaration",
+      "declared": null,
+      "expected": {
+        "envelope": "",
+        "content": "host-state/0"
+      },
+      "legacy": true
+    },
+    {
+      "name": "agent-without-roots",
+      "declared": {
+        "content": [
+          "host-state/0"
+        ],
+        "envelopes": []
+      },
+      "expected": {
+        "envelope": "",
+        "content": "host-state/0"
+      },
+      "legacy": false
+    },
+    {
+      "name": "current-agent",
+      "declared": {
+        "content": [
+          "host-state/0"
+        ],
+        "envelopes": [
+          "dsse-ed25519/1"
+        ]
+      },
+      "expected": {
+        "envelope": "dsse-ed25519/1",
+        "content": "host-state/0"
+      },
+      "legacy": false
+    },
+    {
+      "name": "agent-with-both-versions-gets-highest",
+      "declared": {
+        "content": [
+          "host-state/1",
+          "host-state/0"
+        ],
+        "envelopes": [
+          "dsse-ed25519/1"
+        ]
+      },
+      "expected": {
+        "envelope": "dsse-ed25519/1",
+        "content": "host-state/1"
+      },
+      "legacy": false
+    },
+    {
+      "name": "agent-newer-than-platform",
+      "declared": {
+        "content": [
+          "host-state/0",
+          "host-state/1",
+          "host-state/2"
+        ],
+        "envelopes": [
+          "dsse-ed25519/1"
+        ]
+      },
+      "expected": {
+        "envelope": "dsse-ed25519/1",
+        "content": "host-state/1"
+      },
+      "legacy": false
+    },
+    {
+      "name": "agent-only-unknown-content",
+      "declared": {
+        "content": [
+          "host-state/7"
+        ],
+        "envelopes": [
+          "dsse-ed25519/1"
+        ]
+      },
+      "expected": null,
+      "legacy": false
+    },
+    {
+      "name": "agent-unknown-envelope",
+      "declared": {
+        "content": [
+          "host-state/0"
+        ],
+        "envelopes": [
+          "dsse-ed25519/2"
+        ]
+      },
+      "expected": {
+        "envelope": "",
+        "content": "host-state/0"
+      },
+      "legacy": false
+    },
+    {
+      "name": "empty-declaration",
+      "declared": {
+        "content": [],
+        "envelopes": []
+      },
+      "expected": null,
+      "legacy": false
+    },
+    {
+      "name": "leading-zero-is-not-a-version",
+      "declared": {
+        "content": [
+          "host-state/01"
+        ],
+        "envelopes": [
+          "dsse-ed25519/1"
+        ]
+      },
+      "expected": null,
+      "legacy": false
+    },
+    {
+      "name": "malformed-versions-ignored",
+      "declared": {
+        "content": [
+          "host-state",
+          "host-state/x",
+          "host-state/01",
+          "host-state/0"
+        ],
+        "envelopes": [
+          "dsse-ed25519"
+        ]
+      },
+      "expected": {
+        "envelope": "",
+        "content": "host-state/0"
+      },
+      "legacy": false
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "since": "2026-09-23T09:58:12.907Z",
+  "collected_at": "2026-09-23T10:13:41.482Z",
+  "truncated": false,
+  "omitted_containers": 0,
+  "omitted_volumes": 0,
+  "dropped_buckets": 0,
+  "dropped_events": 2,
+  "containers": [
+    {
+      "id": "1cf48d6c97398c2ab33dd6da957b5e7424d036cfddd9d14e1a721b888b6512b5",
+      "name": "orbita-web-1",
+      "compose_project": "orbita",
+      "compose_service": "web",
+      "platform_stack": true,
+      "state": "running",
+      "health": "healthy",
+      "restart_count": 0,
+      "exit_code": null,
+      "oom_killed": false,
+      "started_at": "2026-09-23T10:02:17.540218Z",
+      "finished_at": null,
+      "image": {
+        "ref": "registry.example.test/orbita/web:2.4.1",
+        "id": "sha256:770519f9d6ef81c37c4e8055193c545de3fc1af909cf20e4214bd17a94437212",
+        "verdict": "match",
+        "reason": null,
+        "baseline_id": "sha256:770519f9d6ef81c37c4e8055193c545de3fc1af909cf20e4214bd17a94437212",
+        "baseline_source": "apply"
+      },
+      "cgroup": {
+        "status": "ok",
+        "reason": null,
+        "memory_bytes": 412385280,
+        "memory_max_bytes": 1073741824,
+        "oom_kills": 0,
+        "cpu_usage_usec": 8812345678,
+        "cpu_nr_throttled": 12,
+        "pids": 23
+      },
+      "network": {
+        "status": "ok",
+        "reason": null,
+        "netns_owner": null,
+        "established": 30,
+        "inbound": 22,
+        "outbound": 8,
+        "external": 17,
+        "peers": [
+          { "address": "172.18.0.1", "port": 3000, "direction": "in", "count": 4 },
+          { "address": "100.72.14.9", "port": 3000, "direction": "in", "count": 1 },
+          { "address": "172.18.0.3", "port": 5432, "direction": "out", "count": 6 },
+          { "address": "fd12:3456:789a::5", "port": 6379, "direction": "out", "count": 2 }
+        ],
+        "peers_truncated": false
+      }
+    },
+    {
+      "id": "18b572b59fdab47b380cb50795319d320ab2aaa9ba3f969982f4a869d087c0fd",
+      "name": "orbita-metrics-1",
+      "compose_project": "orbita",
+      "compose_service": "metrics",
+      "platform_stack": true,
+      "state": "running",
+      "health": null,
+      "restart_count": 1,
+      "exit_code": null,
+      "oom_killed": false,
+      "started_at": "2026-09-23T10:02:19.004731Z",
+      "finished_at": "2026-09-23T10:02:18.911305Z",
+      "image": {
+        "ref": "registry.example.test/orbita/metrics:1.8.0",
+        "id": "sha256:d7be47ff3e87ea188bf55b5d13e1a3d8bb37c379d9fbd62b6fcff510a0c8c4c3",
+        "verdict": "mismatch",
+        "reason": null,
+        "baseline_id": "sha256:0b11920c5fa4471b6afdaa904ed47758caec512289dedf9290b0f38663cfbd5f",
+        "baseline_source": "apply"
+      },
+      "cgroup": {
+        "status": "ok",
+        "reason": null,
+        "memory_bytes": 38912000,
+        "memory_max_bytes": null,
+        "oom_kills": 0,
+        "cpu_usage_usec": 204771302,
+        "cpu_nr_throttled": 0,
+        "pids": 7
+      },
+      "network": {
+        "status": "unavailable",
+        "reason": "shared_netns",
+        "netns_owner": "1cf48d6c97398c2ab33dd6da957b5e7424d036cfddd9d14e1a721b888b6512b5",
+        "established": null,
+        "inbound": null,
+        "outbound": null,
+        "external": null,
+        "peers": [],
+        "peers_truncated": false
+      }
+    },
+    {
+      "id": "269057a51f4043f43e9e31fb3b48827ddef9412a2956a9f78ce213bad4155c06",
+      "name": "orbita-worker-1",
+      "compose_project": "orbita",
+      "compose_service": "worker",
+      "platform_stack": true,
+      "state": "exited",
+      "health": null,
+      "restart_count": 3,
+      "exit_code": 137,
+      "oom_killed": true,
+      "started_at": "2026-09-23T10:07:55.301442Z",
+      "finished_at": "2026-09-23T10:08:21.764090Z",
+      "image": {
+        "ref": "registry.example.test/orbita/worker:2.4.1",
+        "id": "sha256:1128f08a0e4b2dc0001a95fd9346fac947b1b494b45650764a23fb461a94c206",
+        "verdict": "match",
+        "reason": null,
+        "baseline_id": "sha256:1128f08a0e4b2dc0001a95fd9346fac947b1b494b45650764a23fb461a94c206",
+        "baseline_source": "apply"
+      },
+      "cgroup": {
+        "status": "unavailable",
+        "reason": "not_running",
+        "memory_bytes": null,
+        "memory_max_bytes": null,
+        "oom_kills": null,
+        "cpu_usage_usec": null,
+        "cpu_nr_throttled": null,
+        "pids": null
+      },
+      "network": {
+        "status": "unavailable",
+        "reason": "not_running",
+        "netns_owner": null,
+        "established": null,
+        "inbound": null,
+        "outbound": null,
+        "external": null,
+        "peers": [],
+        "peers_truncated": false
+      }
+    },
+    {
+      "id": "7ad3b7e454acae7c364f32e1a7ffe48a597a97d380bd8e8d8271ad0b05504f0f",
+      "name": "kassa-api-1",
+      "compose_project": "kassa",
+      "compose_service": "api",
+      "platform_stack": true,
+      "state": "running",
+      "health": "healthy",
+      "restart_count": 0,
+      "exit_code": null,
+      "oom_killed": false,
+      "started_at": "2026-09-19T07:31:40.118006Z",
+      "finished_at": null,
+      "image": {
+        "ref": "registry.example.test/kassa/api:5.2.0",
+        "id": "sha256:531b3c461eba5762fb7095dc04eeabc211ea7d09f0a4d2b071b471add77855e7",
+        "verdict": "match",
+        "reason": null,
+        "baseline_id": "sha256:531b3c461eba5762fb7095dc04eeabc211ea7d09f0a4d2b071b471add77855e7",
+        "baseline_source": "adopted"
+      },
+      "cgroup": {
+        "status": "ok",
+        "reason": null,
+        "memory_bytes": 187236352,
+        "memory_max_bytes": 536870912,
+        "oom_kills": 0,
+        "cpu_usage_usec": 95577120443,
+        "cpu_nr_throttled": 1840,
+        "pids": 41
+      },
+      "network": {
+        "status": "ok",
+        "reason": null,
+        "netns_owner": null,
+        "established": 10,
+        "inbound": 7,
+        "outbound": 3,
+        "external": 5,
+        "peers": [
+          { "address": "172.19.0.2", "port": 8080, "direction": "in", "count": 2 },
+          { "address": "10.40.2.15", "port": 5432, "direction": "out", "count": 3 }
+        ],
+        "peers_truncated": false
+      }
+    },
+    {
+      "id": "0a3674119334e1cfb5f520c73c8d77c0d906b6d93b129fb5e661d79a0be286a4",
+      "name": "legacy-cron",
+      "compose_project": null,
+      "compose_service": null,
+      "platform_stack": false,
+      "state": "running",
+      "health": null,
+      "restart_count": 0,
+      "exit_code": null,
+      "oom_killed": false,
+      "started_at": "2026-08-30T02:00:07.662913Z",
+      "finished_at": null,
+      "image": {
+        "ref": "legacy/cron:latest",
+        "id": "sha256:d674e1bb4332a0fcfb47a8eef5c054317322ab7276424b46f9df1df3798c13b7",
+        "verdict": "unknown",
+        "reason": "no_baseline",
+        "baseline_id": null,
+        "baseline_source": null
+      },
+      "cgroup": {
+        "status": "unavailable",
+        "reason": "cgroup_v1",
+        "memory_bytes": null,
+        "memory_max_bytes": null,
+        "oom_kills": null,
+        "cpu_usage_usec": null,
+        "cpu_nr_throttled": null,
+        "pids": null
+      },
+      "network": {
+        "status": "unavailable",
+        "reason": "host_network",
+        "netns_owner": null,
+        "established": null,
+        "inbound": null,
+        "outbound": null,
+        "external": null,
+        "peers": [],
+        "peers_truncated": false
+      }
+    }
+  ],
+  "volumes": [
+    {
+      "name": "orbita_pgdata",
+      "driver": "local",
+      "compose_project": "orbita",
+      "platform_stack": true,
+      "status": "ok",
+      "reason": null,
+      "fs_total_bytes": 105089261568,
+      "fs_avail_bytes": 61202694144,
+      "fs_used_bytes": 43886567424
+    },
+    {
+      "name": "legacy_media",
+      "driver": "local",
+      "compose_project": null,
+      "platform_stack": false,
+      "status": "unavailable",
+      "reason": "own_fs_requires_root",
+      "fs_total_bytes": null,
+      "fs_avail_bytes": null,
+      "fs_used_bytes": null
+    },
+    {
+      "name": "backup_offsite",
+      "driver": "example/sshfs:latest",
+      "compose_project": null,
+      "platform_stack": false,
+      "status": "unavailable",
+      "reason": "driver_not_local",
+      "fs_total_bytes": null,
+      "fs_avail_bytes": null,
+      "fs_used_bytes": null
+    }
+  ],
+  "buckets": [
+    {
+      "start": "2026-09-23T10:00:00Z",
+      "seconds": 300,
+      "samples": 5,
+      "truncated": false,
+      "containers": [
+        {
+          "name": "orbita-web-1",
+          "mem_avg_bytes": 398458880,
+          "mem_max_bytes": 431226880,
+          "cpu_usage_usec": 61234567,
+          "cpu_nr_throttled": 0,
+          "oom_kills": 0,
+          "pids_max": 24,
+          "conns_max": 31,
+          "restarts": 0
+        },
+        {
+          "name": "orbita-metrics-1",
+          "mem_avg_bytes": 37748736,
+          "mem_max_bytes": 39845888,
+          "cpu_usage_usec": 1203311,
+          "cpu_nr_throttled": 0,
+          "oom_kills": 0,
+          "pids_max": 7,
+          "conns_max": null,
+          "restarts": 1
+        },
+        {
+          "name": "orbita-worker-1",
+          "mem_avg_bytes": 902823936,
+          "mem_max_bytes": 1048576000,
+          "cpu_usage_usec": 143998012,
+          "cpu_nr_throttled": 311,
+          "oom_kills": 1,
+          "pids_max": 12,
+          "conns_max": 4,
+          "restarts": 1
+        },
+        {
+          "name": "kassa-api-1",
+          "mem_avg_bytes": 185597952,
+          "mem_max_bytes": 190840832,
+          "cpu_usage_usec": 30112400,
+          "cpu_nr_throttled": 9,
+          "oom_kills": 0,
+          "pids_max": 41,
+          "conns_max": 12,
+          "restarts": 0
+        },
+        {
+          "name": "legacy-cron",
+          "mem_avg_bytes": null,
+          "mem_max_bytes": null,
+          "cpu_usage_usec": null,
+          "cpu_nr_throttled": null,
+          "oom_kills": null,
+          "pids_max": null,
+          "conns_max": null,
+          "restarts": 0
+        }
+      ],
+      "volumes": [
+        {
+          "name": "orbita_pgdata",
+          "used_avg_bytes": 43883950080,
+          "used_max_bytes": 43885514752,
+          "total_bytes": 105089261568
+        },
+        {
+          "name": "legacy_media",
+          "used_avg_bytes": null,
+          "used_max_bytes": null,
+          "total_bytes": null
+        },
+        {
+          "name": "backup_offsite",
+          "used_avg_bytes": null,
+          "used_max_bytes": null,
+          "total_bytes": null
+        }
+      ]
+    },
+    {
+      "start": "2026-09-23T10:05:00Z",
+      "seconds": 300,
+      "samples": 5,
+      "truncated": false,
+      "containers": [
+        {
+          "name": "orbita-web-1",
+          "mem_avg_bytes": 409993216,
+          "mem_max_bytes": 415236096,
+          "cpu_usage_usec": 58710233,
+          "cpu_nr_throttled": 4,
+          "oom_kills": 0,
+          "pids_max": 23,
+          "conns_max": 30,
+          "restarts": 0
+        },
+        {
+          "name": "orbita-metrics-1",
+          "mem_avg_bytes": 38797312,
+          "mem_max_bytes": 38912000,
+          "cpu_usage_usec": 998120,
+          "cpu_nr_throttled": 0,
+          "oom_kills": 0,
+          "pids_max": 7,
+          "conns_max": null,
+          "restarts": 0
+        },
+        {
+          "name": "orbita-worker-1",
+          "mem_avg_bytes": 1005584384,
+          "mem_max_bytes": 1073741824,
+          "cpu_usage_usec": 88104555,
+          "cpu_nr_throttled": 207,
+          "oom_kills": 1,
+          "pids_max": 12,
+          "conns_max": 4,
+          "restarts": 1
+        },
+        {
+          "name": "kassa-api-1",
+          "mem_avg_bytes": 186646528,
+          "mem_max_bytes": 187236352,
+          "cpu_usage_usec": 29870041,
+          "cpu_nr_throttled": 11,
+          "oom_kills": 0,
+          "pids_max": 41,
+          "conns_max": 11,
+          "restarts": 0
+        },
+        {
+          "name": "legacy-cron",
+          "mem_avg_bytes": null,
+          "mem_max_bytes": null,
+          "cpu_usage_usec": null,
+          "cpu_nr_throttled": null,
+          "oom_kills": null,
+          "pids_max": null,
+          "conns_max": null,
+          "restarts": 0
+        }
+      ],
+      "volumes": [
+        {
+          "name": "orbita_pgdata",
+          "used_avg_bytes": 43886039040,
+          "used_max_bytes": 43886567424,
+          "total_bytes": 105089261568
+        },
+        {
+          "name": "legacy_media",
+          "used_avg_bytes": null,
+          "used_max_bytes": null,
+          "total_bytes": null
+        },
+        {
+          "name": "backup_offsite",
+          "used_avg_bytes": null,
+          "used_max_bytes": null,
+          "total_bytes": null
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "key": "0123456789abcdef0000000000000001",
+      "kind": "crashed",
+      "name": "orbita-worker-1",
+      "compose_project": "orbita",
+      "compose_service": "worker",
+      "image": "registry.example.test/orbita/worker:2.4.1",
+      "image_id": "sha256:1128f08a0e4b2dc0001a95fd9346fac947b1b494b45650764a23fb461a94c206",
+      "prev_image": null,
+      "prev_image_id": null,
+      "exit_code": 137,
+      "oom_killed": true,
+      "restarts": 3,
+      "health": null,
+      "at": "2026-09-23T10:08:21.764090Z"
+    },
+    {
+      "key": "0123456789abcdef0000000000000002",
+      "kind": "deployed",
+      "name": "orbita-web-1",
+      "compose_project": "orbita",
+      "compose_service": "web",
+      "image": "registry.example.test/orbita/web:2.4.1",
+      "image_id": "sha256:770519f9d6ef81c37c4e8055193c545de3fc1af909cf20e4214bd17a94437212",
+      "prev_image": "registry.example.test/orbita/web:2.4.0",
+      "prev_image_id": "sha256:b44ad5f364bd4f9c37d611ac3000be819a50f769380b03292e53152199be6ca8",
+      "exit_code": null,
+      "oom_killed": null,
+      "restarts": 0,
+      "health": "healthy",
+      "at": "2026-09-23T10:02:17.540218Z"
+    }
+  ]
+}

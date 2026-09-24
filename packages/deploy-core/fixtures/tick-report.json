@@ -1,0 +1,136 @@
+{
+  "limits": {
+    "epochPattern": "^[0-9a-f]{32}$",
+    "shaPattern": "^[0-9a-f]{64}$",
+    "slugPattern": "^[a-z][a-z0-9-]{1,38}[a-z0-9]$",
+    "maxSeq": 9007199254740991,
+    "maxUndelivered": 32,
+    "maxDriftPerTick": 50,
+    "maxIdx": 63,
+    "maxReportSectionBytes": 32768,
+    "queueMaxEntries": 200,
+    "queueMaxBytes": 65536
+  },
+  "enums": {
+    "undeliveredReason": ["network", "timeout", "http_4xx", "http_5xx", "unauthorized", "other"],
+    "driftObject": ["compose", "env", "caddyfile"],
+    "driftStatus": ["match", "mismatch", "missing", "unreadable", "no_baseline"],
+    "driftDisposition": ["in_transit", "foreign", "foreign_over_pending"]
+  },
+  "report": {
+    "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8",
+    "seq": 42,
+    "undelivered": [
+      { "from": 38, "to": 39, "reason": "http_5xx" },
+      { "from": 41, "to": 41, "reason": "timeout" }
+    ],
+    "queueDropped": { "count": 3, "fromSeq": 10, "toSeq": 12 },
+    "drift": [
+      {
+        "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8",
+        "seq": 40,
+        "idx": 0,
+        "object": "compose",
+        "slug": "shop-front",
+        "status": "mismatch",
+        "disposition": "foreign",
+        "observedAt": "2026-09-17T10:00:00Z",
+        "diskSha": "1111111111111111111111111111111111111111111111111111111111111111",
+        "expectedSha": "2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      {
+        "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8",
+        "seq": 40,
+        "idx": 1,
+        "object": "env",
+        "slug": "shop-front",
+        "status": "mismatch",
+        "disposition": "foreign_over_pending",
+        "observedAt": "2026-09-17T10:00:00Z"
+      },
+      {
+        "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8",
+        "seq": 42,
+        "idx": 0,
+        "object": "caddyfile",
+        "status": "mismatch",
+        "disposition": "foreign",
+        "observedAt": "2026-09-17T10:02:00Z",
+        "diskSha": "3333333333333333333333333333333333333333333333333333333333333333",
+        "expectedSha": "4444444444444444444444444444444444444444444444444444444444444444"
+      },
+      {
+        "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8",
+        "seq": 42,
+        "idx": 1,
+        "object": "compose",
+        "slug": "git-blog",
+        "status": "no_baseline",
+        "observedAt": "2026-09-17T10:02:00Z"
+      }
+    ]
+  },
+  "reportAck": {
+    "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8",
+    "seq": 42,
+    "queueDroppedRecorded": true,
+    "drift": [
+      { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 40, "idx": 0 },
+      { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 40, "idx": 1 },
+      { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 42, "idx": 0 },
+      { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 42, "idx": 1 }
+    ]
+  },
+  "rejectedReports": [
+    { "name": "не объект", "report": "garbage" },
+    { "name": "epoch не hex", "report": { "epoch": "XYZ", "seq": 1 } },
+    { "name": "epoch в верхнем регистре", "report": { "epoch": "3F2A9C1E0B7D4E6FA1C2D3E4F5A6B7C8", "seq": 1 } },
+    { "name": "seq ноль", "report": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 0 } },
+    { "name": "seq дробный", "report": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 1.5 } },
+    { "name": "seq выше 2^53-1", "report": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 9007199254740992 } },
+    { "name": "seq строкой", "report": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": "7" } }
+  ],
+  "droppedDrift": [
+    {
+      "name": "env с хешем отбрасывается целиком",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "env", "slug": "shop-front", "status": "mismatch", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z", "diskSha": "1111111111111111111111111111111111111111111111111111111111111111" }
+    },
+    {
+      "name": "неизвестный объект",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "kernel", "slug": "shop-front", "status": "mismatch", "observedAt": "2026-09-17T10:00:00Z" }
+    },
+    {
+      "name": "неизвестный статус",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "compose", "slug": "shop-front", "status": "hacked", "observedAt": "2026-09-17T10:00:00Z" }
+    },
+    {
+      "name": "idx вне предела",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 64, "object": "compose", "slug": "shop-front", "status": "missing", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z" }
+    },
+    {
+      "name": "slug с разметкой",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "compose", "slug": "<img src=x>", "status": "missing", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z" }
+    },
+    {
+      "name": "compose без slug",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "compose", "status": "missing", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z" }
+    },
+    {
+      "name": "caddyfile со slug",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "caddyfile", "slug": "shop-front", "status": "missing", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z" }
+    },
+    {
+      "name": "sha не той длины",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "compose", "slug": "shop-front", "status": "mismatch", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z", "diskSha": "abc" }
+    },
+    {
+      "name": "неизвестное поле",
+      "item": { "epoch": "3f2a9c1e0b7d4e6fa1c2d3e4f5a6b7c8", "seq": 5, "idx": 0, "object": "compose", "slug": "shop-front", "status": "missing", "disposition": "foreign", "observedAt": "2026-09-17T10:00:00Z", "content": "SECRET=1" }
+    }
+  ],
+  "droppedUndelivered": [
+    { "name": "from больше to", "item": { "from": 9, "to": 3, "reason": "network" } },
+    { "name": "неизвестная причина", "item": { "from": 3, "to": 4, "reason": "cosmic_ray" } },
+    { "name": "to не меньше seq отчёта", "item": { "from": 41, "to": 42, "reason": "network" } }
+  ]
+}

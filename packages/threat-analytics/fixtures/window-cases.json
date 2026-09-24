@@ -1,0 +1,5407 @@
+{
+ "_comment": "Общая оконная фикстура (ADR-0060). Записи — факты access-лога; каждая реализация рендерит их в свой формат (awk: nginx и Caddy JSON, Go: Caddy JSON) и обязана получить те же агрегаты окна. verdict проверяет только судья на платформе (evaluate.ts + политика шума). Первый случай — реплей настоящего скана 10.09.2026: адреса обезличены, выборка сокращена, пути и коды подлинные.",
+ "cases": [
+  {
+   "name": "реплей скана 10.09.2026: словарь секретов, отказано всё, 200 только у HTML-оболочки",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wp-config.php.bak",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config.json",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.development",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/",
+     "status": 200,
+     "bytes": 36054,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.sample",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/web/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/docker-compose.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env~",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.production.local",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.staging.local",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/api/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wp-config.php.orig",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/aws/credentials",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/terraform.tfvars",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/server.key",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config.yml",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config.yaml",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/status",
+     "status": 200,
+     "bytes": 8989,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/testing/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/initializers/secret_token.rb",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.ssh/id_ecdsa_sk.priv",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wp-config-sample.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/var/run/secrets/kubernetes.io/serviceaccount/token",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.vault-token",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/aws.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/env.py",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/heapdump",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config.inc.php.save",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/actuator/events",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/azure.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/testing/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/service-account.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/settings.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/server-status",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.ssh/id_ecdsa_sk.priv",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/database.yaml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/initializers/secret_token.rb",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/id_dsa",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/db_config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/var/run/secrets/kubernetes.io/serviceaccount/token",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config.inc.php.swp",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/heapdump",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.vault-token",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/deploy.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/actuator/dump",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/config.inc.php.bak",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../.env.local",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/settings.php.old",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.capistrano",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../../../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../.env.local",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../.env.production",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wordpress/wp-config.php",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/blog/wp-config.php",
+     "status": 404,
+     "bytes": 6084,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/project/.env",
+     "status": 307,
+     "bytes": 46,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": null
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/initializers/secret_token.rb.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/settings/production.py",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/settings/development.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.override",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/uvicorn/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/bootstrap-local.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/includes/config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/application/config/config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/src/main/resources/application-prod.properties",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/config.inc.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/app/config/database.yml.pgsql",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/initializers/secret_token.rb.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/..%5C.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wp-admin/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wp-admin/includes/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/out/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../../../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../.env.local",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../.env.production",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../../.env",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/../../.env.local",
+     "status": 400,
+     "bytes": 166,
+     "host": "example.test",
+     "userAgent": "-",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/services/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/wp-login.php.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/laravel/.env.local",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/gatsby-config.js",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/project/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/includes/config.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/core/config.php",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config/initializers/twilio.rb",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/setting.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/uvicorn/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.firebase/firebaserc",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.vercel",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/aws_credentials",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/doctl/config.yaml",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env_copy",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.4",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.20230601",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/certificate.pfx",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/api-keys.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.git/logs/HEAD",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.svn/auth/svn.simple",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/app/etc/env.php.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/administrator/configuration.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/azure-pipelines.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/firebase-adminsdk.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/terraform/outputs.tf",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/chef/data_bags/users/admin.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/infra/terraform.tfvars.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.svn/entries",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.svn/auth/svn.simple",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/api-key.txt",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/rootCA.pem",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/token.txt",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/kubernetes/deployment.yaml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/secret.key",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/db.sqlite3",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/users.db",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/pgadmin/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/apache2/error.log",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/.env",
+     "status": 307,
+     "bytes": 44,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": null
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/deploy/env/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/sentry/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/repo/.env",
+     "status": 200,
+     "bytes": 5835,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/stripe.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/mailgun/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.composer/auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/~/.composer/auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/loki/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/static/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.vault-token.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/composer.auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/opt/www/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/Pipfile.lock",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/public_html/.env.local",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/backend-admin/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/redis.conf.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/nginx/access.log",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/services/auth/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/repo/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth/config.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/opentelemetry/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/microservices/auth/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.vault-token.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/secrets/jwt.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/ses/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.vault/config",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth.log",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/images/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/Caddyfile",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.composer/auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/vault/policy.hcl",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/~/.composer/auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/auth/secrets.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/nats/nats-server.conf",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/htdocs/.env.local",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/composer.auth.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/android/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/blazor/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/jvm/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/sanity/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/serverless/.env",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/creds/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/.env.production",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/.env.staging",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/login/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/cluster.yml",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/ormconfig.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.admin",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config_prod.php",
+     "status": 404,
+     "bytes": 5863,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/xcode/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/creds.txt",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/config.test.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/appsettings.Override.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/login.php.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/register.php.bak",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/..%5C..%5Cenv",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/hasura/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/setup.php",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/login/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/.env.production",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/admin/.env.staging",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.bazelrc",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.azure",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/typeorm/config.json",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.elastic",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.admin",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/pagerduty/.env",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    },
+    {
+     "ip": "203.0.113.66",
+     "method": "GET",
+     "path": "/.env.jwt",
+     "status": 429,
+     "bytes": 178,
+     "host": "198.51.100.10",
+     "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+     "contentType": "text/html; charset=utf-8"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 199,
+    "suspicious": 115,
+    "categories": {
+     "env_probe": 87,
+     "api_fuzz": 17,
+     "rate_limited": 9,
+     "cms_scan": 2
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.66",
+      "count": 115
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 122,
+     "redirected": 2,
+     "served": 1,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [
+     {
+      "ip": "203.0.113.66",
+      "path": "/admin/config.php",
+      "count": 2
+     },
+     {
+      "ip": "203.0.113.66",
+      "path": "/admin/heapdump",
+      "count": 2
+     },
+     {
+      "ip": "203.0.113.66",
+      "path": "/admin/includes/config.php",
+      "count": 2
+     },
+     {
+      "ip": "203.0.113.66",
+      "path": "/var/run/secrets/kubernetes.io/serviceaccount/token",
+      "count": 2
+     },
+     {
+      "ip": "203.0.113.66",
+      "path": "/admin.php",
+      "count": 1
+     }
+    ],
+    "auth_paths": [
+     {
+      "path": "/admin/config.php",
+      "count": 2,
+      "ips": 1
+     },
+     {
+      "path": "/admin/heapdump",
+      "count": 2,
+      "ips": 1
+     },
+     {
+      "path": "/admin/includes/config.php",
+      "count": 2,
+      "ips": 1
+     },
+     {
+      "path": "/var/run/secrets/kubernetes.io/serviceaccount/token",
+      "count": 2,
+      "ips": 1
+     },
+     {
+      "path": "/admin.php",
+      "count": 1,
+      "ips": 1
+     }
+    ],
+    "top_talker": {
+     "ip": "203.0.113.66",
+     "requests": 199,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "отдан настоящий .env: не HTML и не общая заглушка",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.20",
+     "method": "GET",
+     "path": "/.git/config",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.20",
+     "method": "GET",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 412,
+     "contentType": "text/plain",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.20",
+     "method": "GET",
+     "path": "/.aws/credentials",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure",
+     "exploit_probe"
+    ],
+    "actionable": [
+     "exposure"
+    ],
+    "severity": "critical"
+   },
+   "expect": {
+    "parsed": 3,
+    "suspicious": 3,
+    "categories": {
+     "env_probe": 3
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.20",
+      "count": 3
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 2,
+     "redirected": 0,
+     "served": 1,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.env",
+      "status": 200,
+      "bytes": 412,
+      "content_type": "text/plain"
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.20",
+     "requests": 3,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "одиночный 200 на секретный путь без типа содержимого — возможна утечка, не проверено",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.21",
+     "method": "GET",
+     "path": "/.git/config",
+     "status": 200,
+     "bytes": 318,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.21",
+     "method": "GET",
+     "path": "/.env",
+     "status": 404,
+     "bytes": 162,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure",
+     "exploit_probe"
+    ],
+    "actionable": [
+     "exposure"
+    ],
+    "severity": "high"
+   },
+   "expect": {
+    "parsed": 2,
+    "suspicious": 2,
+    "categories": {
+     "env_probe": 2
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.21",
+      "count": 2
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 1,
+     "redirected": 0,
+     "served": 1,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.git/config",
+      "status": 200,
+      "bytes": 318,
+      "content_type": null
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.21",
+     "requests": 2,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "SPA отдаёт index.html на любой путь: одинаковый размер у трёх и больше проб — заглушка",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.22",
+     "method": "GET",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.22",
+     "method": "GET",
+     "path": "/.git/config",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.22",
+     "method": "GET",
+     "path": "/wp-config.php.bak",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.22",
+     "method": "GET",
+     "path": "/.aws/credentials",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.22",
+     "method": "GET",
+     "path": "/wp-login.php",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 5,
+    "suspicious": 5,
+    "categories": {
+     "env_probe": 4,
+     "cms_scan": 1
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.22",
+      "count": 5
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 5,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.env",
+      "status": 200,
+      "bytes": 1832,
+      "content_type": null
+     },
+     {
+      "path": "/.git/config",
+      "status": 200,
+      "bytes": 1832,
+      "content_type": null
+     },
+     {
+      "path": "/wp-config.php.bak",
+      "status": 200,
+      "bytes": 1832,
+      "content_type": null
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.22",
+     "requests": 5,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "подбор пароля: один адрес долбит один путь входа",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.30",
+     "method": "POST",
+     "path": "/api/auth/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 15
+    },
+    {
+     "ip": "203.0.113.31",
+     "method": "GET",
+     "path": "/",
+     "status": 200,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "auth_brute"
+    ],
+    "actionable": [
+     "auth_brute"
+    ],
+    "severity": "high"
+   },
+   "expect": {
+    "parsed": 16,
+    "suspicious": 15,
+    "categories": {
+     "auth_brute": 15
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.30",
+      "count": 15
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [
+     {
+      "ip": "203.0.113.30",
+      "path": "/api/auth/login",
+      "count": 15
+     }
+    ],
+    "auth_paths": [
+     {
+      "path": "/api/auth/login",
+      "count": 15,
+      "ips": 1
+     }
+    ],
+    "top_talker": {
+     "ip": "203.0.113.30",
+     "requests": 15,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "шлюз отвечает 401 на всё: разные пути по разу — не подбор",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/api",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/api/run",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/api/exec",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/admin",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/debug",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/shell",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/auth",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/session",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/token",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.40",
+     "method": "POST",
+     "path": "/sign-in",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "api.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "scan_storm"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 12,
+    "suspicious": 6,
+    "categories": {
+     "auth_brute": 6
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.40",
+      "count": 6
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [
+     {
+      "ip": "203.0.113.40",
+      "path": "/admin",
+      "count": 1
+     },
+     {
+      "ip": "203.0.113.40",
+      "path": "/auth",
+      "count": 1
+     },
+     {
+      "ip": "203.0.113.40",
+      "path": "/login",
+      "count": 1
+     },
+     {
+      "ip": "203.0.113.40",
+      "path": "/session",
+      "count": 1
+     },
+     {
+      "ip": "203.0.113.40",
+      "path": "/sign-in",
+      "count": 1
+     }
+    ],
+    "auth_paths": [
+     {
+      "path": "/admin",
+      "count": 1,
+      "ips": 1
+     },
+     {
+      "path": "/auth",
+      "count": 1,
+      "ips": 1
+     },
+     {
+      "path": "/login",
+      "count": 1,
+      "ips": 1
+     },
+     {
+      "path": "/session",
+      "count": 1,
+      "ips": 1
+     },
+     {
+      "path": "/sign-in",
+      "count": 1,
+      "ips": 1
+     }
+    ],
+    "top_talker": {
+     "ip": "203.0.113.40",
+     "requests": 12,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "служебные файлы со словами входа в имени — не вход, даже под пределом 429",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/auth.json",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/token.txt",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/auth.log",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/login.php.bak",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/.vault-token",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/.svn/auth/svn.simple",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.41",
+     "method": "GET",
+     "path": "/chef/data_bags/users/admin.json",
+     "status": 429,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 7,
+    "suspicious": 0,
+    "categories": {},
+    "top_ips": [],
+    "probe_outcomes": {
+     "refused": 3,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.41",
+     "requests": 7,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "Host без домена (пустой, адрес с портом, IPv6): сканер по IP учитывается так же, как по домену",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.50",
+     "method": "GET",
+     "path": "/.env",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.50",
+     "method": "GET",
+     "path": "/.git/config",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "198.51.100.10:8080",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.50",
+     "method": "GET",
+     "path": "/.aws/credentials",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "[2001:db8::1]",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 3,
+    "suspicious": 3,
+    "categories": {
+     "env_probe": 3
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.50",
+      "count": 3
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 3,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.50",
+     "requests": 3,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "отказ кромки: 444 nginx и 0 у оборванного Caddy — это отказ, а не ответ",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.51",
+     "method": "GET",
+     "path": "/.env",
+     "status": 444,
+     "bytes": 0,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.51",
+     "method": "GET",
+     "path": "/.git/config",
+     "status": 0,
+     "bytes": 0,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 2,
+    "suspicious": 2,
+    "categories": {
+     "env_probe": 2
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.51",
+      "count": 2
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 2,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.51",
+     "requests": 2,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "скан выше порога всплеска с того же адреса — одна тревога, а не две",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.60",
+     "method": "GET",
+     "path": "/.env",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 300
+    },
+    {
+     "ip": "203.0.113.60",
+     "method": "GET",
+     "path": "/",
+     "status": 200,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 300
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 600,
+    "suspicious": 300,
+    "categories": {
+     "env_probe": 300
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.60",
+      "count": 300
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 300,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.60",
+     "requests": 600,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "перебор путей вместе с разведкой с одного адреса — одна тревога",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/.env",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 3
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-1",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-2",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-3",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-4",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-5",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-6",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-7",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-8",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-9",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-10",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-11",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-12",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-13",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-14",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-15",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-16",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-17",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-18",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-19",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-20",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-21",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-22",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-23",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-24",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-25",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-26",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-27",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-28",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-29",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-30",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-31",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-32",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-33",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-34",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-35",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-36",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-37",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-38",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-39",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-40",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-41",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-42",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-43",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-44",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-45",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-46",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-47",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-48",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-49",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-50",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-51",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-52",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-53",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-54",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-55",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-56",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-57",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-58",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-59",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.63",
+     "method": "GET",
+     "path": "/probe-60",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 63,
+    "suspicious": 63,
+    "categories": {
+     "env_probe": 3,
+     "api_fuzz": 60
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.63",
+      "count": 63
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 3,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.63",
+     "requests": 63,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: флуд с одной пробой — всплеск не прячется в разведку",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.64",
+     "method": "GET",
+     "path": "/",
+     "status": 200,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 700
+    },
+    {
+     "ip": "203.0.113.64",
+     "method": "GET",
+     "path": "/.env",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe",
+     "rate_spike"
+    ],
+    "actionable": [
+     "rate_spike"
+    ]
+   },
+   "expect": {
+    "parsed": 701,
+    "suspicious": 1,
+    "categories": {
+     "env_probe": 1
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.64",
+      "count": 1
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 1,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.64",
+     "requests": 701,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: HTML-заглушка на десяток проб не прячет отданный следом настоящий файл",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v1",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v2",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v3",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v4",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v5",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v6",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v7",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v8",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v9",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v10",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v11",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.env.v12",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.70",
+     "method": "GET",
+     "path": "/.git/config",
+     "status": 200,
+     "bytes": 312,
+     "contentType": "text/plain",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure",
+     "exploit_probe"
+    ],
+    "actionable": [
+     "exposure"
+    ],
+    "severity": "critical"
+   },
+   "expect": {
+    "parsed": 13,
+    "suspicious": 13,
+    "categories": {
+     "env_probe": 13
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.70",
+      "count": 13
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 13,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.git/config",
+      "status": 200,
+      "bytes": 312,
+      "content_type": "text/plain"
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.70",
+     "requests": 13,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: HEAD даёт 0 байт и не склеивается в заглушку, GET того же пути — файл",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.71",
+     "method": "HEAD",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 0,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.71",
+     "method": "HEAD",
+     "path": "/.git/config",
+     "status": 200,
+     "bytes": 0,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.71",
+     "method": "HEAD",
+     "path": "/.aws/credentials",
+     "status": 200,
+     "bytes": 0,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.71",
+     "method": "GET",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 912,
+     "contentType": "text/plain",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure",
+     "exploit_probe"
+    ],
+    "actionable": [
+     "exposure"
+    ],
+    "severity": "critical"
+   },
+   "expect": {
+    "parsed": 4,
+    "suspicious": 4,
+    "categories": {
+     "env_probe": 4
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.71",
+      "count": 4
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 4,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.env",
+      "status": 200,
+      "bytes": 912,
+      "content_type": "text/plain"
+     },
+     {
+      "path": "/.git/config",
+      "status": 200,
+      "bytes": 0,
+      "content_type": null
+     },
+     {
+      "path": "/.aws/credentials",
+      "status": 200,
+      "bytes": 0,
+      "content_type": null
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.71",
+     "requests": 4,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: секрет вне пяти фрагментов у представившегося сканера — исход считается по пути",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.72",
+     "method": "GET",
+     "path": "/backup.sql",
+     "status": 200,
+     "bytes": 20480,
+     "contentType": "application/octet-stream",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 zgrab/0.x"
+    },
+    {
+     "ip": "203.0.113.72",
+     "method": "GET",
+     "path": "/.ssh/id_rsa",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 zgrab/0.x"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure"
+    ],
+    "actionable": [
+     "exposure"
+    ],
+    "severity": "critical"
+   },
+   "expect": {
+    "parsed": 2,
+    "suspicious": 2,
+    "categories": {
+     "scanner_ua": 2
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.72",
+      "count": 2
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 1,
+     "redirected": 0,
+     "served": 1,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/backup.sql",
+      "status": 200,
+      "bytes": 20480,
+      "content_type": "application/octet-stream"
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.72",
+     "requests": 2,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: одиночный 200 на секретный путь без типа и без единого отказа — сервер отвечает 200 на всё, не будит",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.73",
+     "method": "GET",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 1832,
+     "contentType": null,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure",
+     "exploit_probe"
+    ],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 1,
+    "suspicious": 1,
+    "categories": {
+     "env_probe": 1
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.73",
+      "count": 1
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 1,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.env",
+      "status": 200,
+      "bytes": 1832,
+      "content_type": null
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.73",
+     "requests": 1,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: распределённый подбор — шестьдесят адресов по девять попыток на один путь",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "198.51.100.1",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.2",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.3",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.4",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.5",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.6",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.7",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.8",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.9",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.10",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.11",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.12",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.13",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.14",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.15",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.16",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.17",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.18",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.19",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.20",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.21",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.22",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.23",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.24",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.25",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.26",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.27",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.28",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.29",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.30",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.31",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.32",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.33",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.34",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.35",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.36",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.37",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.38",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.39",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.40",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.41",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.42",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.43",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.44",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.45",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.46",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.47",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.48",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.49",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.50",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.51",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.52",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.53",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.54",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.55",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.56",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.57",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.58",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.59",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.60",
+     "method": "POST",
+     "path": "/login",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 9
+    },
+    {
+     "ip": "198.51.100.1",
+     "method": "POST",
+     "path": "/admin",
+     "status": 401,
+     "bytes": 162,
+     "contentType": "application/json",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "auth_brute"
+    ],
+    "actionable": [
+     "auth_brute"
+    ],
+    "severity": "high"
+   },
+   "expect": {
+    "parsed": 541,
+    "suspicious": 541,
+    "categories": {
+     "auth_brute": 541
+    },
+    "top_ips": [
+     {
+      "ip": "198.51.100.1",
+      "count": 10
+     },
+     {
+      "ip": "198.51.100.10",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.11",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.12",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.13",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.14",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.15",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.16",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.17",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.18",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.19",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.2",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.20",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.21",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.22",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.23",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.24",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.25",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.26",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.27",
+      "count": 9
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [
+     {
+      "ip": "198.51.100.1",
+      "path": "/login",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.10",
+      "path": "/login",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.11",
+      "path": "/login",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.12",
+      "path": "/login",
+      "count": 9
+     },
+     {
+      "ip": "198.51.100.13",
+      "path": "/login",
+      "count": 9
+     }
+    ],
+    "auth_paths": [
+     {
+      "path": "/login",
+      "count": 540,
+      "ips": 60
+     },
+     {
+      "path": "/admin",
+      "count": 1,
+      "ips": 1
+     }
+    ],
+    "top_talker": {
+     "ip": "198.51.100.1",
+     "requests": 10,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "ревью: HTML-ответ на уже отданный файл запись о нём не меняет",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.74",
+     "method": "GET",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 412,
+     "contentType": "text/plain",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.74",
+     "method": "GET",
+     "path": "/.env",
+     "status": 200,
+     "bytes": 5120,
+     "contentType": "text/html; charset=utf-8",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    },
+    {
+     "ip": "203.0.113.74",
+     "method": "GET",
+     "path": "/.github/workflows/ci.yml",
+     "status": 200,
+     "bytes": 640,
+     "contentType": "text/plain",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0"
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exposure",
+     "exploit_probe"
+    ],
+    "actionable": [
+     "exposure"
+    ],
+    "severity": "critical"
+   },
+   "expect": {
+    "parsed": 3,
+    "suspicious": 2,
+    "categories": {
+     "env_probe": 2
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.74",
+      "count": 2
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 3,
+     "failed": 0
+    },
+    "served_probes": [
+     {
+      "path": "/.env",
+      "status": 200,
+      "bytes": 412,
+      "content_type": "text/plain"
+     }
+    ],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.74",
+     "requests": 3,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "всплеск с другого адреса, чем разведка, — две разных тревоги",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.61",
+     "method": "GET",
+     "path": "/.env",
+     "status": 404,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 3
+    },
+    {
+     "ip": "203.0.113.62",
+     "method": "GET",
+     "path": "/",
+     "status": 200,
+     "bytes": 162,
+     "contentType": "text/html",
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0",
+     "repeat": 700
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "exploit_probe",
+     "rate_spike"
+    ],
+    "actionable": [
+     "rate_spike"
+    ]
+   },
+   "expect": {
+    "parsed": 703,
+    "suspicious": 3,
+    "categories": {
+     "env_probe": 3
+    },
+    "top_ips": [
+     {
+      "ip": "203.0.113.61",
+      "count": 3
+     }
+    ],
+    "probe_outcomes": {
+     "refused": 3,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.62",
+     "requests": 700,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "работа в кабинете 17.09.2026: предзагрузка страниц Next.js и 304 на статику — не всплеск",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/dashboard?_rsc=1x9ab",
+     "status": 200,
+     "bytes": 2311,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 140
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/calendar?_rsc=1x9ab",
+     "status": 200,
+     "bytes": 1874,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 140
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/organization/audit?_rsc=1x9ab",
+     "status": 200,
+     "bytes": 1990,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 140
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/logo.svg",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 40
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/icon-192.png",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 25
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/manifest.webmanifest",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 25
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/api/notifications/unread-count",
+     "status": 200,
+     "bytes": 42,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "application/json",
+     "repeat": 60
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/projects/alpha",
+     "status": 200,
+     "bytes": 36054,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/html; charset=utf-8",
+     "repeat": 30
+    }
+   ],
+   "verdict": {
+    "kinds": [],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 600,
+    "suspicious": 0,
+    "categories": {},
+    "top_ips": [],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "198.51.100.124",
+     "requests": 600,
+     "background": 510
+    }
+   }
+  },
+  {
+   "name": "флуд обычными страницами 200 без фоновых признаков — всплеск, как раньше",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.80",
+     "method": "GET",
+     "path": "/dashboard",
+     "status": 200,
+     "bytes": 36054,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/html; charset=utf-8",
+     "repeat": 600
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "rate_spike"
+    ],
+    "actionable": [
+     "rate_spike"
+    ]
+   },
+   "expect": {
+    "parsed": 600,
+    "suspicious": 0,
+    "categories": {},
+    "top_ips": [],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.80",
+     "requests": 600,
+     "background": 0
+    }
+   }
+  },
+  {
+   "name": "600 запросов с _rsc — фоновый вес, до всплеска не дотягивает",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.81",
+     "method": "GET",
+     "path": "/dashboard?_rsc=zz",
+     "status": 200,
+     "bytes": 2311,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 600
+    }
+   ],
+   "verdict": {
+    "kinds": [],
+    "actionable": []
+   },
+   "expect": {
+    "parsed": 600,
+    "suspicious": 0,
+    "categories": {},
+    "top_ips": [],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.81",
+     "requests": 600,
+     "background": 600
+    }
+   }
+  },
+  {
+   "name": "подделка фоновых признаков не отключает детектор: 2100 запросов _rsc и 304 на статику — всплеск",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "203.0.113.82",
+     "method": "GET",
+     "path": "/dashboard?_rsc=zz",
+     "status": 200,
+     "bytes": 2311,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 1100
+    },
+    {
+     "ip": "203.0.113.82",
+     "method": "GET",
+     "path": "/_next/static/chunks/main-app.js",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 1000
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "rate_spike"
+    ],
+    "actionable": [
+     "rate_spike"
+    ]
+   },
+   "expect": {
+    "parsed": 2100,
+    "suspicious": 0,
+    "categories": {},
+    "top_ips": [],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.82",
+     "requests": 2100,
+     "background": 2100
+    }
+   }
+  },
+  {
+   "name": "бот за спиной занятого человека: самый активный адрес выбирается по взвешенному счёту, а не по сырому",
+   "window_sec": 180,
+   "records": [
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/dashboard?_rsc=1x9ab",
+     "status": 200,
+     "bytes": 2311,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 140
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/calendar?_rsc=1x9ab",
+     "status": 200,
+     "bytes": 1874,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 140
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/organization/audit?_rsc=1x9ab",
+     "status": 200,
+     "bytes": 1990,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/x-component",
+     "repeat": 140
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/logo.svg",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 40
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/icon-192.png",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 25
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/manifest.webmanifest",
+     "status": 304,
+     "bytes": 0,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": null,
+     "repeat": 25
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/api/notifications/unread-count",
+     "status": 200,
+     "bytes": 42,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "application/json",
+     "repeat": 60
+    },
+    {
+     "ip": "198.51.100.124",
+     "method": "GET",
+     "path": "/projects/alpha",
+     "status": 200,
+     "bytes": 36054,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/html; charset=utf-8",
+     "repeat": 30
+    },
+    {
+     "ip": "203.0.113.83",
+     "method": "GET",
+     "path": "/",
+     "status": 200,
+     "bytes": 36054,
+     "host": "app.example.test",
+     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36",
+     "contentType": "text/html; charset=utf-8",
+     "repeat": 520
+    }
+   ],
+   "verdict": {
+    "kinds": [
+     "rate_spike"
+    ],
+    "actionable": [
+     "rate_spike"
+    ]
+   },
+   "expect": {
+    "parsed": 1120,
+    "suspicious": 0,
+    "categories": {},
+    "top_ips": [],
+    "probe_outcomes": {
+     "refused": 0,
+     "redirected": 0,
+     "served": 0,
+     "failed": 0
+    },
+    "served_probes": [],
+    "auth_attempts": [],
+    "auth_paths": [],
+    "top_talker": {
+     "ip": "203.0.113.83",
+     "requests": 520,
+     "background": 0
+    }
+   }
+  }
+ ]
+}
